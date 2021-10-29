@@ -1,0 +1,44 @@
+@media screen and (max-width: 600px) {
+    header {
+        width: 100%;
+    }
+    #content {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    header {
+        width: 80%;
+    }
+    #content {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        width: 70%;
+    }
+    #content {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header {
+        width: 60%;
+    }
+    #content {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        width: 50%;
+    }
+    #content {
+        width: 50%;
+    }
+}

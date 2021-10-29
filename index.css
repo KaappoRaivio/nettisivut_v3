@@ -1,0 +1,103 @@
+@import url("queries.css");
+@import url("base.css");
+
+html {
+    font-size: min(1vh, 1vw);
+    overflow: hidden;
+}
+body {
+    height: 100%;
+}
+
+#decoration-text h1 {
+    font-size: 1000%;
+    margin: 0;
+}
+
+#decoration-text p {
+    font-size: 500%;
+    margin: 0;
+}
+
+#header-wrapper {
+    top: 0;
+    position: sticky;
+    z-index: 1;
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    position: relative;
+    font-size: 200%;
+    padding: 2%;
+    display: inline-block;
+}
+
+header nav {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-top: 2%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header nav a {
+    padding: 1%;
+    text-align: center;
+    border: 2px solid black;
+}
+
+header img {
+    height: 50%;
+    object-fit: cover;
+}
+
+ul.no-bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#decoration-image {
+    background-image: url("DSC_137_background.webp");
+    background-size: cover;
+    background-position: center bottom;
+}
+
+#decoration-image div {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#decoration-text {
+    color: white;
+    display: flex;
+    padding-left: 15%;
+    align-items: center;
+    background: #0000007f;
+}
+
+#content {
+    font-size: 200%;
+    height: 100vh;
+    background: white;
+    overflow: visible;
+}
+
+hr {
+    border: 1px solid grey;
+}
+#content-wrapper {
+    display: flex;
+    justify-content: center;
+    background: white;
+}
