@@ -1,0 +1,32 @@
+{
+  "name": "nettisivut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js --watch templates"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaappoRaivio/nettisivut_v3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaappoRaivio/nettisivut_v3/issues"
+  },
+  "homepage": "https://github.com/KaappoRaivio/nettisivut_v3#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "glob": "^7.2.0",
+    "glob-promise": "^4.2.2",
+    "handlebars": "^4.7.7",
+    "markdown-it": "^12.2.0",
+    "yaml": "^1.10.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
