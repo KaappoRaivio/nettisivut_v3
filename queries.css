@@ -5,6 +5,9 @@
     #content {
         width: 100%;
     }
+    #decoration-text {
+        justify-content: center;
+    }
 }
 
 @media screen and (min-width: 600px) {
@@ -13,6 +16,9 @@
     }
     #content {
         width: 80%;
+    }
+    #decoration-text {
+        padding-left: 10%;
     }
 }
 
@@ -23,6 +29,9 @@
     #content {
         width: 70%;
     }
+    #decoration-text {
+        padding-left: 15%;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -32,6 +41,9 @@
     #content {
         width: 60%;
     }
+    #decoration-text {
+        padding-left: 20%;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -40,5 +52,8 @@
     }
     #content {
         width: 50%;
+    }
+    #decoration-text {
+        padding-left: 25%;
     }
 }

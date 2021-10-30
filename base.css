@@ -1,8 +1,20 @@
+html {
+    font-size: min(1vh, 1vw);
+    overflow: hidden;
+    font-family: "Noto Sans", sans-serif;
+}
+
 .parallax {
     perspective: 1px;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+.accent {
+    font-family: "Arvo", serif;
+    /*font-weight: bold;*/
+    /*font-weight: 500;*/
 }
 
 .parallax-layer {
@@ -33,4 +45,14 @@
     position: relative;
     height: 100vh;
     transform-style: preserve-3d;
+}
+
+.parallax-group:nth-child(2)::after{
+    content : '';
+    clear : both;
+    display : block;
+}
+
+.fix-scroll {
+    /*scroll-margin-top: 155px;*/
 }
