@@ -1,3 +1,11 @@
+.variables {
+    --content-width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
 html {
     font-size: min(1vh, 1vw);
     overflow: hidden;
@@ -47,11 +55,11 @@ html {
     transform-style: preserve-3d;
 }
 
-.parallax-group:nth-child(2)::after{
-    content : '';
-    clear : both;
-    display : block;
-}
+/*.parallax-group:nth-child(2)::after{*/
+/*    content : '';*/
+/*    clear : both;*/
+/*    display : block;*/
+/*}*/
 
 .fix-scroll {
     /*scroll-margin-top: 155px;*/

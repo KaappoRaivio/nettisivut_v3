@@ -1,8 +1,9 @@
 {
   "navbarLinks": [
-    "Home",
-    "Portfolio",
-    "CV"
+    { text: "Home", href: "/" },
+    { text: "Portfolio", href: "/portfolio" },
+    { text: "CV", href: "CV" },
+    { text: "About", href: "/about" },
   ],
   "home": {
     "whoAmI": {

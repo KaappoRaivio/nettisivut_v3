@@ -6,12 +6,15 @@
 
 <body>
 <div id="top" class="parallax">
-    {{> fancyGreeting}}
+    {{> simpleGreeting}}
 
-<!--    {{> header}}-->
+    {{> stickyheader}}
 
     <div id="content-wrapper">
         <main id="content">
+            <h2 id="About" class="fix-scroll">About</h2>
+            <h3>Who am I?</h3>
+            {{{this.home.whoAmI.content}}}
         </main>
     </div>
 </div>
