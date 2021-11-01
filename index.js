@@ -24,34 +24,30 @@ const registerPartials = async () => {
     })
 }
 
+const registerPages = async (app, schema) => {
+    const pageFilePaths = await glob("templates/pages/**/*.template.html");
+    console.log(pageFilePaths);
 
-// await registerPartials();
+    pageFilePaths.forEach(pageFilePath => {
+        const pageTemplate = Handlebars.compile(fs.readFileSync(pageFilePath, "utf-8"));
+        const pageName = path.parse(pageFilePath).name.split(".")[0];
 
-registerPartials().then(() => {
-    app.use('/public', express.static(path.join(__dirname, "/public")))
+        app.get(`/${pageName}`, (req, res) => {
+            res.status(200);
+            res.send(pageTemplate(schema));
+        })
+    })
+}
 
-    const mainTemplate = Handlebars.compile(fs.readFileSync("templates/index.template.html", "utf-8"));
+
+registerPartials().then(async () => {
+    app.use('/public', express.static(path.join(__dirname, "/public")));
+    await registerPages(app, schema);
+
+    const mainTemplate = Handlebars.compile(fs.readFileSync("templates/pages/landing.template.html", "utf-8"));
     app.get("/", (req, res) => {
             res.status(200);
             res.send(mainTemplate(schema));
-    })
-
-    const aboutTemplate = Handlebars.compile(fs.readFileSync("templates/about.template.html", "utf-8"));
-    app.get("/about", (req, res) => {
-        res.status(200);
-        res.send(aboutTemplate(schema));
-    })
-
-    const portfolioTemplate = Handlebars.compile(fs.readFileSync("templates/portfolio.template.html", "utf-8"));
-    app.get("/portfolio", (req, res) => {
-        res.status(200);
-        res.send(portfolioTemplate(schema));
-    })
-
-    const cvTemplate = Handlebars.compile(fs.readFileSync("templates/cv.template.html", "utf-8"));
-    app.get("/cv", (req, res) => {
-        res.status(200);
-        res.send(cvTemplate(schema));
     })
 
     app.listen(8000, () => {

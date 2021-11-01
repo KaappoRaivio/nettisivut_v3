@@ -5,13 +5,13 @@
 {{> head}}
 
 <body>
-<div id="top" class="parallax">
+<div id="top">
     {{> simpleGreeting}}
 
     {{> stickyheader}}
 
-    <div id="content-wrapper">
-        <main id="content">
+    <div class="content-wrapper">
+        <main class="content">
             <h2 id="Portfolio">Portfolio</h2>
             <p>Here is a compilation of my personal projects that best represent my skills in various areas of
                 information techology.</p>
@@ -19,7 +19,7 @@
             <ul class="no-bullets add-horizontal-rule">
                 <li>
                     {{#each portfolio}}
-                    <h3 class="portfolio-header accent" id="{{this.title}}">{{this.title}}</h3>
+                    <h3 class="portfolio-header" id="{{this.title}}">{{this.title}}</h3>
                     <img src="{{this.coverImage.src}}"  alt="{{this.coverImage.alt}}"/>
                     <img class="portfolio-logo" src="{{this.logo.src}}" alt=""/>
 

@@ -1,0 +1,7 @@
+#header-wrapper {
+    top: 0;
+    position: sticky;
+    z-index: 1;
+    background: white;
+    scroll-margin-top: 10vh;
+}

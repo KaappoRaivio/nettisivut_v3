@@ -1,0 +1,46 @@
+#greeting-container {
+    height: 100%;
+}
+
+#greeting-text {
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+#greeting-text h1 {
+    font-size: 1000%;
+    margin: 0;
+}
+
+#greeting-text p {
+    font-size: 500%;
+    margin: 0;
+}
+
+#greeting-img {
+    background-image: url("/public/res/DSC_137_background.webp");
+    background-size: cover;
+    background-position: center bottom;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    filter: brightness(0.7);
+    z-index: -10;
+}
+
+#bottom-header {
+    position: absolute;
+    bottom: 0;
+}
+
+#bottom-header nav {}
+
+#bottom-header nav a {
+    color: white !important;
+    border: 1px solid white !important;
+    background: #000000af;
+
+}
