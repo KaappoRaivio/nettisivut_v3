@@ -5,14 +5,20 @@
 {{> head}}
 
 <body>
-<div id="top" class="parallax">
-    {{> fancyGreeting}}
+<div id="top">
+    <div id="greeting-container">
+        <div id="greeting-img"></div>
+        <div id="greeting-text">
+            <div>
+                <h1><b>Kaappo</b> raivio</h1>
+                <p>Your typical nerd</p>
+            </div>
+        </div>
 
-<!--    {{> header}}-->
+        <div class="center" id="bottom-header">
+            {{> header}}
+        </div>
 
-    <div id="content-wrapper">
-        <main id="content">
-        </main>
     </div>
 </div>
 </body>

@@ -2,7 +2,7 @@
     :root {
         --content-width: 100%;
     }
-    #decoration-text {
+    #greeting-text {
         justify-content: center;
     }
 }
@@ -11,7 +11,7 @@
     :root {
         --content-width: 80%;
     }
-    #decoration-text {
+    #greeting-text {
         padding-left: 10%;
     }
 }
@@ -20,7 +20,7 @@
     :root {
         --content-width: 70%;
     }
-    #decoration-text {
+    #greeting-text {
         padding-left: 15%;
     }
 }
@@ -29,7 +29,7 @@
     :root {
         --content-width: 60%;
     }
-    #decoration-text {
+    #greeting-text {
         padding-left: 20%;
     }
 }
@@ -39,7 +39,7 @@
         --content-width: 50%;
     }
 
-    #decoration-text {
+    #greeting-text {
         padding-left: 25%;
     }
 }
