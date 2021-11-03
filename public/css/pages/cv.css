@@ -1,0 +1,47 @@
+.experience-item {
+    border: 2px solid;
+    position: relative;
+    /*padding: 2%;*/
+    margin: 2% 0;
+}
+
+.experience-item__wrapper {
+    position: relative;
+    margin: 2%;
+}
+
+.experience-item__title {
+    margin: 0;
+}
+
+.experience-item__schedule {
+    color: #a5a5a5;
+    font-weight: lighter;
+}
+
+.experience-item__company {
+    margin: 0;
+    /*font-weight: normal !important;*/
+    /*text-decoration: none;*/
+}
+
+.experience-item__when {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    font-size: 75%;
+}
+
+.experience-item__markdown-container {
+    margin: 1% 0;
+    font-size: 75%;
+}
+
+.experience-item__markdown-container p {
+    margin: 0;
+}
+
+.experience-item__markdown-container ul li {
+    margin: 0;
+}

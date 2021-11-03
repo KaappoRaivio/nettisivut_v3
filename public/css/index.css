@@ -2,8 +2,10 @@
 @import url("base.css");
 @import url("fonts.css");
 @import url("parallax.css");
+
 @import url("pages/landing.css");
 @import url("pages/portfolio.css");
+@import url("pages/cv.css");
 
 @import url("fragments/stickyheader.css");
 @import url("fragments/simpleGreeting.css");
@@ -14,10 +16,11 @@
     scroll-padding-top: 11.5%;
     height: 100vh;
     overflow-y: auto;
+    color: var(--primary-color);
 }
 
 
-ul.add-horizontal-rule li:not(:last-child):after {
+ul.add-horizontal-rule>li:not(:last-child):after, ol.add-horizontal-rule>i:not(:last-child):after {
     content: "";
     display: block;
     height: 2px;
@@ -32,7 +35,7 @@ ul.add-horizontal-rule li:not(:last-child):after {
     font-size: 200%;
     padding: 0 2%;
     width: var(--content-width);
-    background: white;
+    background: var(--background-color);
     overflow: visible;
 }
 
@@ -41,5 +44,5 @@ ul.add-horizontal-rule li:not(:last-child):after {
     position: relative;
     display: flex;
     justify-content: center;
-    background: white;
+    background: var(--background-color);
 }

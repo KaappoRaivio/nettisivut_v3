@@ -2,7 +2,9 @@
 
 <html lang="en">
 
-{{> head}}
+<head>
+    {{> head}}
+</head>
 
 <body>
 <div id="top">
@@ -21,7 +23,7 @@
                     {{#each portfolio}}
                     <h3 class="portfolio-header" id="{{this.title}}">{{this.title}}</h3>
                     <img src="{{this.coverImage.src}}"  alt="{{this.coverImage.alt}}"/>
-                    <img class="portfolio-logo" src="{{this.logo.src}}" alt=""/>
+                    <img class="portfolio-logo" loading="lazy" src="{{this.logo.src}}" alt=""/>
 
                     {{{this.previewText.content}}}
                     <a class="read-more" href="portfolio/{{this.title}}"></a>

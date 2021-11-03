@@ -2,6 +2,6 @@
     top: 0;
     position: sticky;
     z-index: 1;
-    background: white;
+    background: var(--background-color);
     scroll-margin-top: 10vh;
 }

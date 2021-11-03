@@ -2,17 +2,19 @@
 
 <html lang="en">
 
-{{> head}}
+<head>
+    {{> head}}
+</head>
 
 <body>
-<div id="top" class="parallax">
+<div id="top">
     {{> simpleGreeting}}
 
     {{> stickyheader}}
 
     <div class="content-wrapper">
         <main class="content">
-            <h2 id="About" class="fix-scroll">About</h2>
+            <h2 id="About">About</h2>
             <h3>Who am I?</h3>
             {{{this.home.whoAmI.content}}}
         </main>

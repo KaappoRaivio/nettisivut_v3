@@ -7,11 +7,11 @@ const glob = require("glob-promise");
 
 
 const app = express();
-const IS_PRODUCTION = app.settings.env === "production";
+const DEBUG = app.settings.env !== "production";
 
 const schema = yaml.parse(fs.readFileSync("public/res/schema.yaml", "utf-8"));
-// console.log(schema);
-
+schema.debug = DEBUG;
+// schema.debug = false;
 
 const registerPartials = async () => {
     const templateFilePaths = await glob("templates/**/*.template.html");
@@ -22,6 +22,13 @@ const registerPartials = async () => {
         console.log(partialName)
         Handlebars.registerPartial(partialName, fs.readFileSync(templateFilePath, "utf-8"));
     })
+
+    Handlebars.registerHelper('reverseArray', (array) => array.slice().reverse());
+    Handlebars.registerHelper("markdown", require("helper-markdown"));
+    Handlebars.registerHelper('equals', (arg1, arg2) => {
+        // return (arg1 === arg2) ? options.fn(this) : options.inverse(this);
+        return arg1 === arg2;
+    });
 }
 
 const registerPages = async (app, schema) => {
@@ -50,7 +57,8 @@ registerPartials().then(async () => {
             res.send(mainTemplate(schema));
     })
 
-    app.listen(8000, () => {
-        console.log("listening on port 8000!")
+    let port = process.env.PORT || 3000;
+    app.listen(port, () => {
+        console.log(`listening on port ${port}!`)
     })
 });

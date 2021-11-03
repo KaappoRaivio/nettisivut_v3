@@ -54,5 +54,67 @@
       black, white, and red.</p>"
       }
     }
-  ]
+  ],
+  "cv": {
+    experience: [
+      {
+        company: "The Finnish National Opera",
+        position: "Children's choir",
+        when: "Aug 2013 – May 2015",
+        description: {
+          language: "html",
+          content: "The only professional-level children's choir in Finland."
+        }
+      },
+      {
+        company: "Accenture Technology Solutions",
+        position: "Application Development Associate",
+        when: "Jun 2019 (at 16yo)",
+        schedule: "full-time (summer job)",
+        description: {
+          language: "html",
+          "content": "As a member of our team, I programmed an indoors navigation stack for a robot used by Accenture for promotion purposes"
+        }
+
+      },
+      {
+        company: "Accenture Technology Solutions",
+        position: "Application Development New Associate",
+        when: "Jun 2021 – Aug 2021 (at 18yo)",
+        schedule: "full-time (summer job)",
+        description: {
+          language: "html",
+          "content": "During the summer my tasks included:
+          <ul>
+<li>Writing an asset processing pipeline for a 3D simulator</li>
+<li>Creating an HTTPS wrapper for a legacy c++ SDK</li>
+<li>Writing a lot of specifications for delegation to subcontractors</li>
+</ul>"
+
+        },
+
+      },
+      {
+        company: "Tmi Kaappo Raivio",
+        position: "Entrepreneur",
+        when: "Feb 2021 –",
+        description: {
+          language: "html",
+          content: "Through my trade name (toiminimi), I sell licenses to my photographs and do small photographing gigs."
+        }
+      },
+      {
+        company: "Accenture Technology Solutions",
+        position: "Application Development Analyst",
+        when: "Sep 2021 – ",
+        schedule: "part-time",
+        description: {
+          language: "html",
+          "content": "I work part-time while studying my final year at Otaniemi upper secondary school's Mathematics and Science Program.
+          My tasks consist of generic software development and system integration."
+        }
+
+      },
+    ]
+  }
 }

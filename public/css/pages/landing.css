@@ -4,7 +4,7 @@
 
 #greeting-text {
     height: 100%;
-    color: white;
+    color: var(--landing-accent);
     display: flex;
     align-items: center;
 }
@@ -36,11 +36,12 @@
     bottom: 0;
 }
 
-#bottom-header nav {}
+#bottom-header nav {
+    color: var(--landing-accent) !important;
+}
 
 #bottom-header nav a {
-    color: white !important;
-    border: 1px solid white !important;
+    color: inherit !important;
+    border: 1px solid !important;
     background: #000000af;
-
 }
