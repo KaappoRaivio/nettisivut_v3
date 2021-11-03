@@ -43,16 +43,18 @@ header {
 
 header nav {
     position: relative;
-    display: grid;
+    /*display: grid;*/
+    display: flex;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1%;
     margin-top: 2%;
 }
 
 header nav a {
-    padding: 1%;
+    /*padding: 1%;*/
     text-align: center;
     border: 2px solid;
+    flex: 1 0 0;
 }
 
 nav a {
