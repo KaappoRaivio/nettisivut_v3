@@ -110,26 +110,11 @@
         ],
       skills:
         [
-          "html",
-          "css",
-          "javaScript",
-
-          "python",
-          "java",
-          "c++",
-
-          "node",
-          "express",
-          "react",
-
-          "Android",
-          "UWP",
-          "Hololens",
-          "HLA",
-
-          "git",
-          "github",
-          "linux",
+          { color: "green", content: ["html", "css", "JavaScript"] },
+          { color: "gray", content: ["python", "java", "c++"] },
+          { color: "red", content: ["node", "express", "react"] },
+          { color: "red", content: ["Android", "UWP", "Hololens", "HLA"] },
+          { color: "red", content: ["git", "github", "linux"] },
         ],
     },
 }
