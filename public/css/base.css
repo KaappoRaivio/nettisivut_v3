@@ -86,3 +86,11 @@ li img:after {
   justify-content: center;
   width: 100%;
 }
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}

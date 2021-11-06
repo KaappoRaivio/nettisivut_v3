@@ -5,6 +5,28 @@
   margin: 2% 0;
 }
 
+.cv-list-item--flex {
+  /*display: inline-flex;*/
+  flex-grow: 1;
+  text-transform: capitalize;
+  padding: 0.5% 1%;
+  margin: 0 2% 2% 0;
+}
+
+.cv-list--flex {
+  margin-right: -2% !important;
+  margin-bottom: -2% !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.cv-list--flex::after {
+  content: "";
+  flex-grow: 10000000;
+}
+
 .cv-list-item__wrapper {
   position: relative;
   margin: 2%;

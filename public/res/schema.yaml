@@ -46,8 +46,8 @@
         [
           {
             company: "The Finnish National Opera",
-            position: "Children's choir",
-            when: "Aug 2013 – May 2015",
+            position: "Children's choir singer and actor",
+            when: "Aug 2013 (10yo) – May 2015 (12yo)",
             description: { language: "html", content: "The only professional-level children's choir in Finland." },
           },
           {
@@ -76,6 +76,7 @@
           {
             company: "Tmi Kaappo Raivio",
             position: "Entrepreneur",
+            schedule: "part-time",
             when: "Feb 2021 –",
             description:
               { language: "html", content: "Through my trade name (toiminimi), I sell licenses to my photographs and do small photographing gigs." },
@@ -85,22 +86,50 @@
             position: "Application Development Analyst",
             when: "Sep 2021 – ",
             schedule: "part-time",
-            description:
-              {
-                language: "html",
-                "content": "I work part-time while studying my final year at Otaniemi upper secondary school's Mathematics and Science Program.
-                  My tasks consist of generic software development and system integration.",
-              },
+            description: { language: "html", "content": "I work part-time while studying my final year at Otaniemi upper secondary school.
+                  My tasks consist of generic software development and system integration." },
           },
         ],
       education:
         [
           {
-            level: "Comprehensive education",
-            school: "Olari Lower Secondary School, mathematics and science program",
+            school: "Olari Lower Secondary School",
+            level: "Mathematics and science program",
             when: "2016 – 2019",
-            description: { language: "html", content: "<p> pöö <strong>asd</strong></p>" },
+            description:
+              { language: "html", content: '<p>GPA of <a href="https://opintopolku.fi/koski/opinnot/aa55dd30c8f9494cade289992adc3738">9.54</a></p>' },
           },
+          {
+            school: "Otaniemi Upper Secondary School",
+            level: "Mathematics and science program",
+            when: "2019 – 2022",
+            description: { language: "html", content: "<p>
+                  Also, a few completed programming courses at Aalto University through collaboration with them
+                  </p>" },
+          },
+        ],
+      skills:
+        [
+          "html",
+          "css",
+          "javaScript",
+
+          "python",
+          "java",
+          "c++",
+
+          "node",
+          "express",
+          "react",
+
+          "Android",
+          "UWP",
+          "Hololens",
+          "HLA",
+
+          "git",
+          "github",
+          "linux",
         ],
     },
 }

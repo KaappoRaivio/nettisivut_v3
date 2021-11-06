@@ -13,7 +13,7 @@
         <main class="content">
           <h2 id="CV">CV</h2>
           <h3>Experience</h3>
-          <ol class="no-bullets add-hori1zontal-rule">
+          <ol class="no-bullets">
             {{#each (reverseArray cv.experience)}}
             <li class="cv-list-item">
               <div class="cv-list-item__wrapper">
@@ -31,13 +31,21 @@
             </li>
             {{/each}}
           </ol>
+          <h3 id="Skills">Skills</h3>
+          <ol class="no-bullets cv-list--flex">
+            {{#each cv.skills}}
+            <li class="cv-list-item cv-list-item--flex">
+              <span class="cv-list-item__wrapper">{{this}}</span>
+            </li>
+            {{/each}}
+          </ol>
           <h3>Education</h3>
-          <ol class="no-bullets add-horizontal-rule">
+          <ol class="no-bullets">
             {{#each (reverseArray cv.education)}}
             <li class="cv-list-item">
               <div class="cv-list-item__wrapper">
-                <h4 class="cv-list-item__title">{{this.position}}</h4>
-                <p class="cv-list-item__subtitle">{{this.company}} <small class="experience-item__schedule">{{this.schedule}}</small></p>
+                <h4 class="cv-list-item__title">{{this.school}}</h4>
+                <p class="cv-list-item__subtitle">{{this.level}} <small class="experience-item__schedule">{{this.schedule}}</small></p>
                 <span class="cv-list-item__top-right-corner">{{this.when}}</span>
 
                 <div class="cv-list-item__content">
