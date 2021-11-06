@@ -1,65 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
-
-<head>
+  <head>
     {{> head}}
-</head>
+  </head>
 
-<body>
-<div id="top">
-    {{> simpleGreeting}}
+  <body>
+    <div id="top">
+      {{> simpleGreeting}} {{> stickyheader}}
 
-    {{> stickyheader}}
-
-    <div class="content-wrapper">
+      <div class="content-wrapper">
         <main class="content">
-            <h2 id="CV">CV</h2>
-            <h3>Experience</h3>
-            <ol class="no-bullets add-hori1zontal-rule">
-                {{#each (reverseArray cv.experience)}}
-                <li class="cv-list-item">
-                    <div class="cv-list-item__wrapper">
-                        <h4 class="cv-list-item__title">{{this.position}}</h4>
-                        <p class="cv-list-item__subtitle">{{this.company}} <small class="experience-item__schedule">{{this.schedule}}</small></p>
-                        <span class="cv-list-item__top-right-corner">{{this.when}}</span>
+          <h2 id="CV">CV</h2>
+          <h3>Experience</h3>
+          <ol class="no-bullets add-hori1zontal-rule">
+            {{#each (reverseArray cv.experience)}}
+            <li class="cv-list-item">
+              <div class="cv-list-item__wrapper">
+                <h4 class="cv-list-item__title">{{this.position}}</h4>
+                <p class="cv-list-item__subtitle">{{this.company}} <small class="experience-item__schedule">{{this.schedule}}</small></p>
+                <span class="cv-list-item__top-right-corner">{{this.when}}</span>
 
-                        <div class="cv-list-item__content">
-                            {{#if (equals this.description.language "html")}}
-                            {{{this.description.content}}}
-                            {{else if (equals this.description.language "markdown") }}
-                            <br>
-                                {{#markdown}}{{{../this.description.content}}}{{/markdown}}
-                            {{/if}}
-                        </div>
-                    </div>
-                </li>
-                {{/each}}
-            </ol>
-            <h3>Education</h3>
-            <ol class="no-bullets add-horizontal-rule">
-                {{#each (reverseArray cv.education)}}
-                <li class="cv-list-item">
-                    <div class="cv-list-item__wrapper">
-                        <h4 class="cv-list-item__title">{{this.position}}</h4>
-                        <p class="cv-list-item__subtitle">{{this.company}} <small class="experience-item__schedule">{{this.schedule}}</small></p>
-                        <span class="cv-list-item__top-right-corner">{{this.when}}</span>
+                <div class="cv-list-item__content">
+                  {{#if (equals this.description.language "html")}} {{{this.description.content}}} {{else if (equals this.description.language
+                  "markdown") }}
+                  <br />
+                  {{#markdown}}{{{../this.description.content}}}{{/markdown}} {{/if}}
+                </div>
+              </div>
+            </li>
+            {{/each}}
+          </ol>
+          <h3>Education</h3>
+          <ol class="no-bullets add-horizontal-rule">
+            {{#each (reverseArray cv.education)}}
+            <li class="cv-list-item">
+              <div class="cv-list-item__wrapper">
+                <h4 class="cv-list-item__title">{{this.position}}</h4>
+                <p class="cv-list-item__subtitle">{{this.company}} <small class="experience-item__schedule">{{this.schedule}}</small></p>
+                <span class="cv-list-item__top-right-corner">{{this.when}}</span>
 
-                        <div class="cv-list-item__content">
-                            {{#if (equals this.description.language "html")}}
-                            {{{this.description.content}}}
-                            {{else if (equals this.description.language "markdown") }}
-                            <br>
-                            {{#markdown}}{{{../this.description.content}}}{{/markdown}}
-                            {{/if}}
-                        </div>
-                    </div>
-                </li>
-                {{/each}}
-            </ol>
+                <div class="cv-list-item__content">
+                  {{#if (equals this.description.language "html")}} {{{this.description.content}}} {{else if (equals this.description.language
+                  "markdown") }}
+                  <br />
+                  {{#markdown}}{{{../this.description.content}}}{{/markdown}} {{/if}}
+                </div>
+              </div>
+            </li>
+            {{/each}}
+          </ol>
         </main>
+      </div>
     </div>
-</div>
-</body>
-
+  </body>
 </html>

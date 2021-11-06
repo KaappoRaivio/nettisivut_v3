@@ -11,38 +11,35 @@
 @import url("fragments/simpleGreeting.css");
 @import url("fragments/fancyGreeting.css");
 
-
 #top {
-    scroll-padding-top: 11.5%;
-    height: 100vh;
-    overflow-y: auto;
-    color: var(--primary-color);
+  scroll-padding-top: 11.5%;
+  height: 100vh;
+  overflow-y: auto;
+  color: var(--primary-color);
 }
 
+ul.add-horizontal-rule > li:not(:last-child):after,
+ol.add-horizontal-rule > i:not(:last-child):after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
 
-ul.add-horizontal-rule>li:not(:last-child):after, ol.add-horizontal-rule>i:not(:last-child):after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 100%;
-
-    margin: 2% 0;
-    background: gray;
+  margin: 2% 0;
+  background: gray;
 }
-
 
 .content {
-    font-size: 200%;
-    padding: 0 2%;
-    width: var(--content-width);
-    background: var(--background-color);
-    overflow: visible;
+  font-size: 200%;
+  padding: 0 2%;
+  width: var(--content-width);
+  background: var(--background-color);
+  overflow: visible;
 }
 
-
 .content-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    background: var(--background-color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: var(--background-color);
 }

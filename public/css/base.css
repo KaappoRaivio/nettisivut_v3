@@ -1,90 +1,88 @@
 :root {
-    --primary-color: black;
-    --landing-accent: white;
-    --background-color: white;
+  --primary-color: black;
+  --landing-accent: white;
+  --background-color: white;
 }
 
 body {
-    margin: 0;
-    height: 100vh;
-
+  margin: 0;
+  height: 100vh;
 }
 
 html {
-    font-size: min(1vh, 1vw);
-    overflow: hidden;
-    font-family: "Noto Sans", sans-serif;
+  font-size: min(1vh, 1vw);
+  overflow: hidden;
+  font-family: "Noto Sans", sans-serif;
 }
 
 hr {
-    border: 1px solid grey;
+  border: 1px solid grey;
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 p {
-    text-align: justify;
-    margin-top: 2%;
+  text-align: justify;
+  margin-top: 2%;
 }
 h2 {
-    font-size: 250%;
-    margin-bottom: 2%;
+  font-size: 250%;
+  margin-bottom: 2%;
 }
 header {
-    width: var(--content-width);
-    position: relative;
-    font-size: 200%;
-    padding: 1% 2% 0;
-    display: inline-block;
-    margin-bottom: 0;
+  width: var(--content-width);
+  position: relative;
+  font-size: 200%;
+  padding: 1% 2% 0;
+  display: inline-block;
+  margin-bottom: 0;
 }
 
 header nav {
-    position: relative;
-    /*display: grid;*/
-    display: flex;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1%;
-    margin-top: 2%;
+  position: relative;
+  /*display: grid;*/
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1%;
+  margin-top: 2%;
 }
 
 header nav a {
-    /*padding: 1%;*/
-    text-align: center;
-    border: 2px solid;
-    flex: 1 0 0;
+  /*padding: 1%;*/
+  text-align: center;
+  border: 2px solid;
+  flex: 1 0 0;
 }
 
 nav a {
-    color: var(--primary-color);
-    text-decoration: none;
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
 a {
-    font-weight: bold;
-    text-decoration: none;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-
-ul.no-bullets, ol.no-bullets {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+ul.no-bullets,
+ol.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 li img:after {
-    clear: both;
+  clear: both;
 }
 
-
 .accent {
-    font-family: "Arvo", serif;
+  font-family: "Arvo", serif;
 }
 
 .center {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
