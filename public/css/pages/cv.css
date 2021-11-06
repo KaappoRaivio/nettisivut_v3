@@ -1,16 +1,16 @@
-.experience-item {
+.cv-list-item {
     border: 2px solid;
     position: relative;
     /*padding: 2%;*/
     margin: 2% 0;
 }
 
-.experience-item__wrapper {
+.cv-list-item__wrapper {
     position: relative;
     margin: 2%;
 }
 
-.experience-item__title {
+.cv-list-item__title {
     margin: 0;
 }
 
@@ -19,13 +19,13 @@
     font-weight: lighter;
 }
 
-.experience-item__company {
+.cv-list-item__subtitle {
     margin: 0;
     /*font-weight: normal !important;*/
     /*text-decoration: none;*/
 }
 
-.experience-item__when {
+.cv-list-item__top-right-corner {
     position: absolute;
     right: 0;
     top: 0;
@@ -33,15 +33,15 @@
     font-size: 75%;
 }
 
-.experience-item__markdown-container {
+.cv-list-item__content {
     margin: 1% 0;
     font-size: 75%;
 }
 
-.experience-item__markdown-container p {
+.cv-list-item__content p {
     margin: 0;
 }
 
-.experience-item__markdown-container ul li {
+.cv-list-item__content ul li {
     margin: 0;
 }

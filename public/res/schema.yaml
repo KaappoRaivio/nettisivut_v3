@@ -73,7 +73,7 @@
         schedule: "full-time (summer job)",
         description: {
           language: "html",
-          "content": "As a member of our team, I programmed an indoors navigation stack for a robot used by Accenture for promotion purposes"
+          "content": "As a member of the R&D team, I programmed an indoors navigation stack for a robot used by Accenture for promotion purposes"
         }
 
       },
@@ -115,6 +115,17 @@
         }
 
       },
+    ],
+    education: [
+      {
+        level: "Comprehensive education",
+        school: "Olari Lower Secondary School, mathematics and science program",
+        when: "2016 – 2019",
+        description: {
+          language: "html",
+          content: "<p> pöö <strong>asd</strong></p>"
+        }
+      }
     ]
   }
 }
