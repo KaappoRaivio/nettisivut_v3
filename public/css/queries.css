@@ -58,6 +58,18 @@
   }
 }
 
+@media screen and (max-width: 2499px) {
+  :root {
+    --greeting-image-src: url("/public/res/header_background.webp");
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  :root {
+    --greeting-image-src: url("/public/res/header_background_highres.webp");
+  }
+}
+
 @media screen and (prefers-color-scheme: dark) {
   :root {
     --primary-color: black;

@@ -1,10 +1,18 @@
 #simple-decoration-image-wrapper {
   height: 30vh;
 }
-
 #simple-decoration-image {
-  background-image: url("/public/res/DSC_137_background.webp");
+  background-image: var(--greeting-image-src);
   background-size: cover;
   background-position: center bottom;
   height: 100%;
 }
+
+/*@media screen and (min-width: 2500px) {*/
+/*  #simple-decoration-image {*/
+/*    background-image: url("/public/res/header_background_highres.webp");*/
+/*    background-size: cover;*/
+/*    background-position: center bottom;*/
+/*    height: 100%;*/
+/*  }*/
+/*}*/

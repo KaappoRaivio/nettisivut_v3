@@ -20,7 +20,7 @@
 }
 
 #greeting-img {
-  background-image: url("/public/res/DSC_137_background.webp");
+  background-image: var(--greeting-image-src);
   background-size: cover;
   background-position: center bottom;
   position: absolute;
