@@ -1,7 +1,7 @@
 #header-wrapper {
-  top: 0;
-  position: sticky;
-  z-index: 1;
-  background: var(--background-color);
-  scroll-margin-top: 10vh;
+    top: 0;
+    position: sticky;
+    z-index: 1;
+    background: var(--background-color);
+    scroll-margin-top: 10vh;
 }

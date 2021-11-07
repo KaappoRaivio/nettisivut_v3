@@ -17,6 +17,18 @@
 <link rel="manifest" href="public/res/favicon/site.webmanifest" />
 
 <link rel="stylesheet" href="public/css/index.css" />
+
+<link
+    rel="preload"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+/>
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" /></noscript>
+
+<link rel="preload" href="public/css/fonts.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="public/css/fonts.css" /></noscript>
+
 {{#if debug}}
 <script src="https://livejs.com/live.js" async></script>
 {{/if}}

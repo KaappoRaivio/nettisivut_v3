@@ -1,120 +1,145 @@
 {
-  "navbarLinks":
-    [{ text: "Home", href: "/" }, { text: "Portfolio", href: "/portfolio" }, { text: "CV", href: "CV" }, { text: "About", href: "/about" }],
-  "home": { "whoAmI": { "language": "html", "content": "<p>
-            My name is Kaappo, I'm 18 years old and I currently I study at Otaniemi Upper Secondary School at their
-            mathematics and science program. I have programmed since I was six, and thus programming is very close
-            to my heart. Despite my relatively young age, I have a lot of experience developing software, both
-            professionally and for fun.
-            </p>
-            <p>
-            In addition to programming, my hobbies include photography, all event technology -related matters, and
-            playing the guitar.
-            </p>" } },
-  "portfolio":
-    [
-      {
-        "title": "Scientia",
-        "coverImage":
-          {
-            "src": "https://raw.githubusercontent.com/KaappoRaivio/Scientia/master/src/assets/readme/concept1.png",
-            "alt": "Boat instruments in a grid",
-          },
-        "logo": { "src": "public/res/scientia-logo.svg" },
-        "previewText": { "language": "html", "content": '<p>Scientia (<code>/ˈsaɪənˌtɪa/</code>) is a boat instrumentation system which uses an open
-              standard, <a href="https://signalk.org/">Signal K</a> as its data source. It''s capable of
-              displaying data from a <a href="https://github.com/SignalK/signalk-server">Signal K server</a>
-              in a clear and uncluttered way.</p>' },
-      },
-      {
-        "title": "WilmaInk",
-        "coverImage":
-          {
-            "src": "https://raw.githubusercontent.com/KaappoRaivio/wilmaInk/master/assets/1.png",
-            "alt": "My school schedule on as it would be shown on an e-ink display",
-          },
-        "logo": { "src": "public/res/wilmaink.svg" },
-        "previewText":
-          { "language": "html", "content": "<p>WilmaInk is a sister of my other project Wilmacrawler, which it uses as a back-end. WilmaInk
-              presents the data in a form that can be rendered on an e-ink display. This means limited resution, and very limited color palette, in my e-ink display's case 3 colors:
-              black, white, and red.</p>" },
-      },
-    ],
-  "cv":
-    {
-      experience:
+    "navbarLinks":
+        [{ text: "Home", href: "/" }, { text: "Portfolio", href: "/portfolio" }, { text: "CV", href: "CV" }, { text: "About", href: "/about" }],
+    "home": { "whoAmI": { "language": "html", "content": "<p>
+                        My name is Kaappo, I'm 18 years old and I currently I study at Otaniemi Upper Secondary School at their
+                        mathematics and science program. I have programmed since I was six, and thus programming is very close
+                        to my heart. Despite my relatively young age, I have a lot of experience developing software, both
+                        professionally and for fun.
+                        </p>
+                        <p>
+                        In addition to programming, my hobbies include photography, all event technology -related matters, and
+                        playing the guitar.
+                        </p>" } },
+    "portfolio":
         [
-          {
-            company: "The Finnish National Opera",
-            position: "Children's choir singer and actor",
-            when: "Aug 2013 (10yo) – May 2015 (12yo)",
-            description: { language: "html", content: "The only professional-level children's choir in Finland." },
-          },
-          {
-            company: "Accenture Technology Solutions",
-            position: "Application Development Associate",
-            when: "Jun 2019 (at 16yo)",
-            schedule: "full-time (summer job)",
-            description:
-              {
-                language: "html",
-                "content": "As a member of the R&D team, I programmed an indoors navigation stack for a robot used by Accenture for promotion purposes",
-              },
-          },
-          {
-            company: "Accenture Technology Solutions",
-            position: "Application Development New Associate",
-            when: "Jun 2021 – Aug 2021 (at 18yo)",
-            schedule: "full-time (summer job)",
-            description: { language: "html", "content": "During the summer my tasks included:
-                  <ul>
-                  <li>Writing an asset processing pipeline for a 3D simulator</li>
-                  <li>Creating an HTTPS wrapper for a legacy c++ SDK</li>
-                  <li>Writing a lot of specifications for delegation to subcontractors</li>
-                  </ul>" },
-          },
-          {
-            company: "Tmi Kaappo Raivio",
-            position: "Entrepreneur",
-            schedule: "part-time",
-            when: "Feb 2021 –",
-            description:
-              { language: "html", content: "Through my trade name (toiminimi), I sell licenses to my photographs and do small photographing gigs." },
-          },
-          {
-            company: "Accenture Technology Solutions",
-            position: "Application Development Analyst",
-            when: "Sep 2021 – ",
-            schedule: "part-time",
-            description: { language: "html", "content": "I work part-time while studying my final year at Otaniemi upper secondary school.
-                  My tasks consist of generic software development and system integration." },
-          },
+            {
+                "title": "Scientia",
+                "coverImage":
+                    {
+                        "src": "https://raw.githubusercontent.com/KaappoRaivio/Scientia/master/src/assets/readme/concept1.png",
+                        "alt": "Boat instruments in a grid",
+                    },
+                "logo": { "src": "public/res/scientia-logo.svg" },
+                "previewText":
+                    { "language": "html", "content": '<p>Scientia (<code>/ˈsaɪənˌtɪa/</code>) is a boat instrumentation system which uses an open
+                            standard, <a href="https://signalk.org/">Signal K</a> as its data source. It''s capable of
+                            displaying data from a <a href="https://github.com/SignalK/signalk-server">Signal K server</a>
+                            in a clear and uncluttered way.</p>' },
+            },
+            {
+                "title": "WilmaInk",
+                "coverImage":
+                    {
+                        "src": "https://raw.githubusercontent.com/KaappoRaivio/wilmaInk/master/assets/1.png",
+                        "alt": "My school schedule on as it would be shown on an e-ink display",
+                    },
+                "logo": { "src": "public/res/wilmaink.svg" },
+                "previewText":
+                    { "language": "html", "content": "<p>WilmaInk is a sister of my other project Wilmacrawler, which it uses as a back-end. WilmaInk
+                            presents the data in a form that can be rendered on an e-ink display. This means limited resution, and very limited color palette, in my e-ink display's case 3 colors:
+                            black, white, and red.</p>" },
+            },
         ],
-      education:
-        [
-          {
-            school: "Olari Lower Secondary School",
-            level: "Mathematics and science program",
-            when: "2016 – 2019",
-            description:
-              { language: "html", content: '<p>GPA of <a href="https://opintopolku.fi/koski/opinnot/aa55dd30c8f9494cade289992adc3738">9.54</a></p>' },
-          },
-          {
-            school: "Otaniemi Upper Secondary School",
-            level: "Mathematics and science program",
-            when: "2019 – 2022",
-            description: { language: "html", content: "<p>
-                  Also, a few completed programming courses at Aalto University through collaboration with them
-                  </p>" },
-          },
-        ],
-      skills:
-        [
-          { color: "green", content: ["html", "css", "JavaScript"] },
-          { color: "gray", content: ["python", "java", "c++"] },
-          { color: "red", content: ["node", "express", "react"] },
-          { color: "red", content: ["Android", "UWP", "Hololens", "HLA"] },
-          { color: "red", content: ["git", "github", "linux"] },
-        ],
-    },
+    "cv":
+        {
+            experience:
+                [
+                    {
+                        company: "The Finnish National Opera",
+                        position: "Children's choir singer and actor",
+                        when: "Aug 2013 (10yo) – May 2015 (12yo)",
+                        description: { language: "html", content: "The only professional-level children's choir in Finland." },
+                    },
+                    {
+                        company: "Accenture Technology Solutions",
+                        position: "Application Development Associate",
+                        when: "Jun 2019 (at 16yo)",
+                        schedule: "full-time (summer job)",
+                        description:
+                            {
+                                language: "html",
+                                "content": "As a member of the R&D team, I programmed an indoors navigation stack for a robot used by Accenture for promotion purposes",
+                            },
+                    },
+                    {
+                        company: "Accenture Technology Solutions",
+                        position: "Application Development New Associate",
+                        when: "Jun 2021 – Aug 2021 (at 18yo)",
+                        schedule: "full-time (summer job)",
+                        description: { language: "html", "content": "During the summer my tasks included:
+                                    <ul>
+                                    <li>Writing an asset processing pipeline for a 3D simulator</li>
+                                    <li>Creating an HTTPS wrapper for a legacy c++ SDK</li>
+                                    <li>Writing a lot of specifications for delegation to subcontractors</li>
+                                    </ul>" },
+                    },
+                    {
+                        company: "Tmi Kaappo Raivio",
+                        position: "Entrepreneur",
+                        schedule: "part-time",
+                        when: "Feb 2021 –",
+                        description:
+                            {
+                                language: "html",
+                                content: "Through my trade name (toiminimi), I sell licenses to my photographs and do small photographing gigs.",
+                            },
+                    },
+                    {
+                        company: "Accenture Technology Solutions",
+                        position: "Application Development Analyst",
+                        when: "Sep 2021 – ",
+                        schedule: "part-time",
+                        description: { language: "html", "content": "I work part-time while studying my final year at Otaniemi upper secondary school.
+                                    My tasks consist of generic software development and system integration." },
+                    },
+                ],
+            education:
+                [
+                    {
+                        school: "Olari Lower Secondary School",
+                        level: "Mathematics and science program",
+                        when: "Aug 2016 – Jun 2019",
+                        description:
+                            {
+                                language: "html",
+                                content: '<p>GPA of <a href="https://opintopolku.fi/koski/opinnot/aa55dd30c8f9494cade289992adc3738">9.54</a></p>',
+                            },
+                    },
+                    {
+                        school: "Otaniemi Upper Secondary School",
+                        level: "Mathematics and science program",
+                        when: "Aug 2019 – Jun 2022 (expected)",
+                        description: { language: "html", content: "<p>
+                                    Also, a few completed programming courses at Aalto University through collaboration with them
+                                    </p>" },
+                    },
+                ],
+            skills:
+                [
+                    {
+                        color: "green",
+                        content:
+                            [
+                                '<acronym title="Hypertext Markup Language">HTML</acronym>',
+                                '<acronym title="Cascading stylesheets">CSS</acronym>',
+                                "JavaScript",
+                            ],
+                    },
+                    { color: "#004752", content: ["python", "java", "c++"] },
+                    { color: "blue", content: ["node", "express", "react"] },
+                    {
+                        color: "red",
+                        content:
+                            [
+                                "Android",
+                                '<acronym title="Universal Windows Platform">UWP</acronym>',
+                                "Hololens",
+                                '<acronym title="High level architecture">HLA</acronym>',
+                            ],
+                    },
+                    { color: "gray", content: ["git", "github", "linux"] },
+                ],
+            competitions: [],
+        },
 }
