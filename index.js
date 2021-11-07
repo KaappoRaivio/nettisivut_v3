@@ -4,27 +4,33 @@ const https = require("https");
 const http = require("http");
 const fs = require("fs");
 
+const redirectToHttps = require("./redirectToHttps");
+
+const getCertificates = debug => {
+  const key = fs.readFileSync("/etc/letsencrypt/live/kaapporaivio.fi/privkey.pem", "utf8");
+  const cert = fs.readFileSync("/etc/letsencrypt/live/kaapporaivio.fi/cert.pem", "utf8");
+  const ca = fs.readFileSync("/etc/letsencrypt/live/kaapporaivio.fi/chain.pem", "utf8");
+  return { key, cert, ca };
+};
+
 const makeApp = require("./app");
 
 const main = async () => {
-  const useHTTPS = false;
-  const app = await makeApp(useHTTPS);
+  const DEBUG = process.env.NODE_ENV !== "production";
 
-  const httpsServer = https.createServer(
-    {
-      key: fs.readFileSync("server.key"),
-      cert: fs.readFileSync("server.cert"),
-    },
-    app
-  );
-  const httpServer = http.createServer(app);
+  const app = await makeApp(DEBUG);
 
-  let port = process.env.PORT || useHTTPS ? 443 : 80;
-  httpServer.listen(process.env.PORT || 80);
-  if (!process.env.PORT) {
-    httpsServer.listen(process.env.PORT || 443, () => {
-      console.log(`listening on port ${port}!`);
-    });
+  const httpsServer = https.createServer(getCertificates(), app);
+  httpsServer.listen(process.env.PORT || 443, () => {
+    console.log(`listening on port ${port}!`);
+  });
+
+  if (DEBUG) {
+    const httpServer = http.createServer(app);
+    httpServer.listen(process.env.PORT || 3000);
+  } else {
+    const httpServer = http.createServer(redirectToHttps());
+    httpServer.listen(80);
   }
 };
 
