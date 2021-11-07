@@ -1,0 +1,15 @@
+<li class="cv-list-item cv-list-item--{{this.role}}">
+  <div class="cv-list-item__wrapper">
+    <div class="cv-list-item__wrapper__title__container">
+      <h4 class="cv-list-item__title">{{this.title}}</h4>
+      <span class="cv-list-item__corner">{{{this.cornerNote}}}</span>
+    </div>
+    <p class="cv-list-item__subtitle">{{this.subtitle}} <small class="experience-item__schedule">{{this.note}}</small></p>
+
+    <div class="cv-list-item__content">
+      {{#if (equals this.description.language "html")}} {{{this.description.content}}} {{else if (equals this.description.language "markdown") }}
+      <br />
+      {{#markdown}}{{{../this.description.content}}}{{/markdown}} {{/if}}
+    </div>
+  </div>
+</li>

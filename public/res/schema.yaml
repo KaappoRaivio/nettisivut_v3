@@ -31,7 +31,7 @@
         "coverImage":
           {
             "src": "https://raw.githubusercontent.com/KaappoRaivio/wilmaInk/master/assets/1.png",
-            "alt": "My school schedule on as it would be shown on an e-ink display",
+            "alt": "My school note on as it would be shown on an e-ink display",
           },
         "logo": { "src": "public/res/wilmaink.svg" },
         "previewText":
@@ -45,27 +45,29 @@
       experience:
         [
           {
-            company: "The Finnish National Opera",
-            position: "Children's choir singer and actor",
-            when: "Aug 2013 (10yo) – May 2015 (12yo)",
+            title: "The Finnish National Opera",
+            subtitle: "Children's choir singer and actor",
+            cornerNote: "Aug 2013 (10yo) – May 2015 (12yo)",
             description: { language: "html", content: "The only professional-level children's choir in Finland." },
+            role: "secondary",
           },
           {
-            company: "Accenture Technology Solutions",
-            position: "Application Development Associate",
-            when: "Jun 2019 (at 16yo)",
-            schedule: "full-time (summer job)",
+            title: "Accenture Technology Solutions",
+            subtitle: "Application Development Associate",
+            cornerNote: "Jun 2019 (at 16yo)",
+            note: "full-time (summer job)",
             description:
               {
                 language: "html",
                 "content": "As a member of the R&D team, I programmed an indoors navigation stack for a robot used by Accenture for promotion purposes",
               },
+            role: "secondary",
           },
           {
-            company: "Accenture Technology Solutions",
-            position: "Application Development New Associate",
-            when: "Jun 2021 – Aug 2021 (at 18yo)",
-            schedule: "full-time (summer job)",
+            title: "Accenture Technology Solutions",
+            subtitle: "Application Development New Associate",
+            cornerNote: "Jun 2021 – Aug 2021 (at 18yo)",
+            note: "full-time (summer job)",
             description: { language: "html", "content": "During the summer my tasks included:
                   <ul>
                   <li>Writing an asset processing pipeline for a 3D simulator</li>
@@ -74,38 +76,51 @@
                   </ul>" },
           },
           {
-            company: "Tmi Kaappo Raivio",
-            position: "Entrepreneur",
-            schedule: "part-time",
-            when: "Feb 2021 –",
+            title: "Tmi Kaappo Raivio",
+            subtitle: "Entrepreneur",
+            note: "part-time",
+            cornerNote: "Feb 2021 –",
             description:
               { language: "html", content: "Through my trade name (toiminimi), I sell licenses to my photographs and do small photographing gigs." },
+            role: "primary",
           },
           {
-            company: "Accenture Technology Solutions",
-            position: "Application Development Analyst",
-            when: "Sep 2021 – ",
-            schedule: "part-time",
+            title: "Accenture Technology Solutions",
+            subtitle: "Application Development Analyst",
+            cornerNote: "Sep 2021 – ",
+            note: "part-time",
             description: { language: "html", "content": "I work part-time while studying my final year at Otaniemi upper secondary school.
                   My tasks consist of generic software development and system integration." },
+            role: "primary",
           },
         ],
       education:
         [
           {
-            school: "Olari Lower Secondary School",
-            level: "Mathematics and science program",
-            when: "Aug 2016 – Jun 2019",
-            description:
-              { language: "html", content: '<p>GPA of <a href="https://opintopolku.fi/koski/opinnot/aa55dd30c8f9494cade289992adc3738">9.54</a></p>' },
+            title: "Päivänkehrä elementary school",
+            subtitle: "",
+            cornerNote: "Aug 2010 – Jun 2016",
+            description: { language: "html", content: "" },
+            role: "secondary",
           },
           {
-            school: "Otaniemi Upper Secondary School",
-            level: "Mathematics and science program",
-            when: "Aug 2019 – Jun 2022 (expected)",
+            title: "Olari Lower Secondary School",
+            subtitle: "Mathematics and science program",
+            cornerNote: "Aug 2016 – Jun 2019",
+            description:
+              {
+                language: "html",
+                content: '<p>GPA of 9.54, <a href="https://opintopolku.fi/koski/opinnot/aa55dd30c8f9494cade289992adc3738"><u>Link to my diploma (in Finnish)</u></a></p>',
+              },
+          },
+          {
+            title: "Otaniemi Upper Secondary School",
+            subtitle: "Mathematics and science program",
+            cornerNote: "Aug 2019 – Jun 2022 (expected)",
             description: { language: "html", content: "<p>
                   Also, a few completed programming courses at Aalto University through collaboration with them
                   </p>" },
+            role: "primary",
           },
         ],
       skills:
@@ -130,5 +145,15 @@
           { color: "gray", content: ["git", "github", "linux"] },
         ],
       competitions: [],
+      volunteerWork:
+        [
+          {
+            title: "Event technician",
+            description: { language: "html", content: 'A student-lead technician team from our upper secondary is responsible for providing event
+                  tech for most of the events of the school. You can find photos
+                  <a href="https://olariav.pixieset.com/olariav/" target="_blank">of our accomplishments here</a>' },
+            cornerNote: "Aug 2019 –",
+          },
+        ],
     },
 }

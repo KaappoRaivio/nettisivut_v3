@@ -1,6 +1,7 @@
 :root {
   --primary-color: black;
   --secondary-color: #595959;
+  --tertiary-color: #7f7f7f;
   --landing-accent: white;
   --background-color: white;
 }
@@ -94,4 +95,14 @@ li img:after {
 
 .inline-block {
   display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.columns {
+  display: grid;
+  grid-gap: 4%;
+  grid-template-columns: repeat(var(--columns), 1fr);
 }
