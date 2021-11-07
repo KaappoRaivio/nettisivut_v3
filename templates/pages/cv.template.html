@@ -12,12 +12,24 @@
       <div class="content-wrapper">
         <main class="content content--wide">
           <h2 id="CV">CV</h2>
-          <div class="columns">
+          <div class="columns" id="cv-content">
             <div class="columns__column">
               <h3>Experience</h3>
               <ol class="no-bullets">
                 {{#each (reverseArray cv.experience)}} {{> cvListItem}} {{/each}}
               </ol>
+              <h3 id="Skills">Skills</h3>
+              <div class="no-bullets cv-list--flex">
+                {{#each cv.skills}}
+                <ol class="no-bullets cv-list--flex__item">
+                  {{#each this.content}}
+                  <li class="cv-list-item cv-list-item--flex" style="color: {{../this.color}};">
+                    <span class="cv-list-item__wrapper">{{{this}}}</span>
+                  </li>
+                  {{/each}}
+                </ol>
+                {{/each}}
+              </div>
             </div>
             <div class="columns__column">
               <h3>Education</h3>
@@ -27,14 +39,6 @@
               <h3>Volunteer work</h3>
               <ol class="no-bullets">
                 {{#each (reverseArray cv.volunteerWork)}} {{> cvListItem}} {{/each}}
-              </ol>
-              <h3 id="Skills">Skills</h3>
-              <ol class="no-bullets cv-list--flex">
-                {{#each cv.skills}} {{#each this.content}}
-                <li class="cv-list-item cv-list-item--flex" style="color: {{../this.color}};">
-                  <span class="cv-list-item__wrapper">{{{this}}}</span>
-                </li>
-                {{/each}} {{/each}}
               </ol>
             </div>
           </div>
