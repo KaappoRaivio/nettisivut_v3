@@ -21,9 +21,11 @@ const main = async () => {
 
   let port = process.env.PORT || useHTTPS ? 443 : 80;
   httpServer.listen(process.env.PORT || 80);
-  httpsServer.listen(process.env.PORT || 443, () => {
-    console.log(`listening on port ${port}!`);
-  });
+  if (!process.env.PORT) {
+    httpsServer.listen(process.env.PORT || 443, () => {
+      console.log(`listening on port ${port}!`);
+    });
+  }
 };
 
 main().catch(err => console.error(err));

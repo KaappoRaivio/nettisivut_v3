@@ -2,3 +2,5 @@ node_modules/
 server.key
 server.cert
 *.log
+
+.well-known/acme-challenge

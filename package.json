@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prod": "NODE_ENV=production node index.js",
-    "dev": "PORT=3000 nodemon index.js --watch templates --watch public --watch . -e js,html,css,json,yml,yaml"
+    "dev": "PORT=3001 nodemon index.js --watch templates --watch public --watch . -e js,html,css,json,yml,yaml"
   },
   "repository": {
     "type": "git",

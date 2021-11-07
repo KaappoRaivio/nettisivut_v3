@@ -60,6 +60,7 @@ module.exports = async (useHTTPS = false) => {
   await registerPartials();
 
   app.use("/public", express.static(path.join(__dirname, "/public")));
+  app.use("/.well-known", express.static(path.join(__dirname, "/.well-known")));
   await registerPages(app, schema);
 
   const mainTemplate = Handlebars.compile(fs.readFileSync("templates/pages/landing.template.html", "utf-8"));
