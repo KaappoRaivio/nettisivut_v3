@@ -13,7 +13,7 @@ module.exports = async debug => {
   require("./mylogger")(app, debug);
 
   const schema = yaml.parse(fs.readFileSync("public/res/schema.yaml", "utf-8"));
-  schema.debug = DEBUG;
+  schema.debug = debug;
   console.log("Debug: ", debug);
 
   const registerPartials = async () => {

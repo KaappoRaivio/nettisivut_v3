@@ -22,7 +22,7 @@ const main = async () => {
 
   const httpsServer = https.createServer(getCertificates(), app);
   httpsServer.listen(process.env.PORT || 443, () => {
-    console.log(`listening on port ${port}!`);
+    console.log(`listening on HTTPS!`);
   });
 
   if (DEBUG) {
