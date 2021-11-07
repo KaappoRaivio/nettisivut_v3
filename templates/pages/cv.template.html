@@ -1,76 +1,72 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        {{> head}}
-    </head>
+  <head>
+    {{> head}}
+  </head>
 
-    <body>
-        <div id="top">
-            {{> simpleGreeting}} {{> stickyheader}}
+  <body>
+    <div id="top">
+      {{> simpleGreeting}} {{> stickyheader}}
 
-            <div class="content-wrapper">
-                <main class="content">
-                    <h2 id="CV">CV</h2>
-                    <div class="columns">
-                        <div class="columns__column">
-                            <h3>Experience</h3>
-                            <ol class="no-bullets">
-                                {{#each (reverseArray cv.experience)}}
-                                <li class="cv-list-item">
-                                    <div class="cv-list-item__wrapper">
-                                        <h4 class="cv-list-item__title">{{this.position}}</h4>
-                                        <p class="cv-list-item__subtitle">
-                                            {{this.company}} <small class="experience-item__schedule">{{this.schedule}}</small>
-                                        </p>
-                                        <span class="cv-list-item__corner">{{this.when}}</span>
+      <div class="content-wrapper">
+        <main class="content">
+          <h2 id="CV">CV</h2>
+          <div class="columns">
+            <div class="columns__column">
+              <h3>Experience</h3>
+              <ol class="no-bullets">
+                {{#each (reverseArray cv.experience)}}
+                <li class="cv-list-item">
+                  <div class="cv-list-item__wrapper">
+                    <h4 class="cv-list-item__title">{{this.position}}</h4>
+                    <p class="cv-list-item__subtitle">{{this.company}} <small class="experience-item__schedule">{{this.schedule}}</small></p>
+                    <span class="cv-list-item__corner">{{this.when}}</span>
 
-                                        <div class="cv-list-item__content">
-                                            {{#if (equals this.description.language "html")}} {{{this.description.content}}} {{else if (equals
-                                            this.description.language "markdown") }}
-                                            <br />
-                                            {{#markdown}}{{{../this.description.content}}}{{/markdown}} {{/if}}
-                                        </div>
-                                    </div>
-                                </li>
-                                {{/each}}
-                            </ol>
-                            <h3 id="Skills">Skills</h3>
-                            <ol class="no-bullets cv-list--flex">
-                                {{#each cv.skills}} {{#each this.content}}
-                                <li class="cv-list-item cv-list-item--flex" style="color: {{../this.color}};">
-                                    <span class="cv-list-item__wrapper">{{{this}}}</span>
-                                </li>
-                                {{/each}} {{/each}}
-                            </ol>
-                        </div>
-                        <div class="columns__column">
-                            <h3>Education</h3>
-                            <ol class="no-bullets">
-                                {{#each (reverseArray cv.education)}}
-                                <li class="cv-list-item">
-                                    <div class="cv-list-item__wrapper">
-                                        <h4 class="cv-list-item__title">{{this.school}}</h4>
-                                        <p class="cv-list-item__subtitle">
-                                            {{this.level}} <small class="experience-item__schedule">{{this.schedule}}</small>
-                                        </p>
-                                        <span class="cv-list-item__corner">{{this.when}}</span>
-
-                                        <div class="cv-list-item__content">
-                                            {{#if (equals this.description.language "html")}} {{{this.description.content}}} {{else if (equals
-                                            this.description.language "markdown") }}
-                                            <br />
-                                            {{#markdown}}{{{../this.description.content}}}{{/markdown}} {{/if}}
-                                        </div>
-                                    </div>
-                                </li>
-                                {{/each}}
-                            </ol>
-                            <h3>Volunteer work</h3>
-                        </div>
+                    <div class="cv-list-item__content">
+                      {{#if (equals this.description.language "html")}} {{{this.description.content}}} {{else if (equals this.description.language
+                      "markdown") }}
+                      <br />
+                      {{#markdown}}{{{../this.description.content}}}{{/markdown}} {{/if}}
                     </div>
-                </main>
+                  </div>
+                </li>
+                {{/each}}
+              </ol>
+              <h3 id="Skills">Skills</h3>
+              <ol class="no-bullets cv-list--flex">
+                {{#each cv.skills}} {{#each this.content}}
+                <li class="cv-list-item cv-list-item--flex" style="color: {{../this.color}};">
+                  <span class="cv-list-item__wrapper">{{{this}}}</span>
+                </li>
+                {{/each}} {{/each}}
+              </ol>
             </div>
-        </div>
-    </body>
+            <div class="columns__column">
+              <h3>Education</h3>
+              <ol class="no-bullets">
+                {{#each (reverseArray cv.education)}}
+                <li class="cv-list-item">
+                  <div class="cv-list-item__wrapper">
+                    <h4 class="cv-list-item__title">{{this.school}}</h4>
+                    <p class="cv-list-item__subtitle">{{this.level}} <small class="experience-item__schedule">{{this.schedule}}</small></p>
+                    <span class="cv-list-item__corner">{{this.when}}</span>
+
+                    <div class="cv-list-item__content">
+                      {{#if (equals this.description.language "html")}} {{{this.description.content}}} {{else if (equals this.description.language
+                      "markdown") }}
+                      <br />
+                      {{#markdown}}{{{../this.description.content}}}{{/markdown}} {{/if}}
+                    </div>
+                  </div>
+                </li>
+                {{/each}}
+              </ol>
+              <h3>Volunteer work</h3>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
 </html>

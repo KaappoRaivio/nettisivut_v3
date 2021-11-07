@@ -1,10 +1,10 @@
 <header>
-    <nav>
-        {{#each navbarLinks}} {{#if (equals ../landing true)}} {{#unless (equals this.text "Home")}}
-        <a href="{{this.href}}">{{this.text}}</a>
-        {{/unless}} {{else}}
-        <a href="{{this.href}}">{{this.text}}</a>
-        {{/if}} {{/each}}
-    </nav>
-    <hr />
+  <nav>
+    {{#each navbarLinks}} {{#if (equals ../landing true)}} {{#unless (equals this.text "Home")}}
+    <a href="{{this.href}}">{{this.text}}</a>
+    {{/unless}} {{else}}
+    <a href="{{this.href}}">{{this.text}}</a>
+    {{/if}} {{/each}}
+  </nav>
+  <hr />
 </header>

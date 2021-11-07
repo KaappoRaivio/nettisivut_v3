@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        {{> head}}
-    </head>
+  <head>
+    {{> head}}
+  </head>
 
-    <body>
-        <div id="top">
-            {{> simpleGreeting}} {{> stickyheader}}
+  <body>
+    <div id="top">
+      {{> simpleGreeting}} {{> stickyheader}}
 
-            <div class="content-wrapper">
-                <main class="content">
-                    <h2 id="Portfolio">Portfolio</h2>
-                    <p>Here is a compilation of my personal projects that best represent my skills in various areas of information techology.</p>
+      <div class="content-wrapper">
+        <main class="content">
+          <h2 id="Portfolio">Portfolio</h2>
+          <p>Here is a compilation of my personal projects that best represent my skills in various areas of information techology.</p>
 
-                    <ul class="no-bullets add-horizontal-rule">
-                        <li>
-                            {{#each portfolio}}
-                            <h3 class="portfolio-header" id="{{this.title}}">{{this.title}}</h3>
-                            <img src="{{this.coverImage.src}}" alt="{{this.coverImage.alt}}" />
-                            <img class="portfolio-logo" loading="lazy" src="{{this.logo.src}}" alt="" />
+          <ul class="no-bullets add-horizontal-rule">
+            <li>
+              {{#each portfolio}}
+              <h3 class="portfolio-header" id="{{this.title}}">{{this.title}}</h3>
+              <img src="{{this.coverImage.src}}" alt="{{this.coverImage.alt}}" />
+              <img class="portfolio-logo" loading="lazy" src="{{this.logo.src}}" alt="" />
 
-                            {{{this.previewText.content}}}
-                            <a class="read-more" href="portfolio/{{this.title}}"></a>
-                            {{/each}}
-                        </li>
-                    </ul>
-                </main>
-            </div>
-        </div>
-    </body>
+              {{{this.previewText.content}}}
+              <a class="read-more" href="portfolio/{{this.title}}"></a>
+              {{/each}}
+            </li>
+          </ul>
+        </main>
+      </div>
+    </div>
+  </body>
 </html>

@@ -1,10 +1,10 @@
 #simple-decoration-image-wrapper {
-    height: 30vh;
+  height: 30vh;
 }
 
 #simple-decoration-image {
-    background-image: url("/public/res/DSC_137_background.webp");
-    background-size: cover;
-    background-position: center bottom;
-    height: 100%;
+  background-image: url("/public/res/DSC_137_background.webp");
+  background-size: cover;
+  background-position: center bottom;
+  height: 100%;
 }
