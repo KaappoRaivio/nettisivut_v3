@@ -3,4 +3,4 @@ server.key
 server.cert
 *.log
 
-.well-known/acme-challenge
+.well-known/acme-challenge/*
