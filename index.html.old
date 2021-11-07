@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="public/css/index.css">
     <script src="https://livejs.com/live.js"></script>
-<!--    <script src="index.js"></script>-->
+<!--    <script src="app.js"></script>-->
 
 </head>
 
