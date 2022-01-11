@@ -44,7 +44,8 @@ module.exports = async debug => {
 
     pageFilePaths.forEach(pageFilePath => {
       const pageTemplate = Handlebars.compile(fs.readFileSync(pageFilePath, "utf-8"));
-      const pageName = path.parse(pageFilePath).name.split(".")[0];
+
+      const pageName = pageFilePath.split("/").slice(2).join("/").replace(".template.html", "");
 
       app.get(`/${pageName}`, (req, res) => {
         res.status(200);
