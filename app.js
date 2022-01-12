@@ -21,6 +21,7 @@ module.exports = async debug => {
   const registerPartials = async () => {
     const templateFilePaths = await glob("templates/**/*.template.html");
     console.log("Defining the following templates:");
+
     console.group();
     templateFilePaths.forEach(path => console.log(path));
     console.groupEnd();
