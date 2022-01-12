@@ -5,9 +5,11 @@ const Handlebars = require("handlebars");
 const path = require("path");
 const glob = require("glob-promise");
 const compression = require("compression");
+const helmet = require("helmet");
 
 module.exports = async debug => {
   const app = express();
+  app.use(helmet());
   app.use(compression());
 
   require("./mylogger")(app, debug);
