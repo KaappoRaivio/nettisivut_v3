@@ -17,7 +17,7 @@
         "title": "Scientia",
         "coverImage":
           {
-            "src": "https://raw.githubusercontent.com/KaappoRaivio/Scientia/master/src/assets/readme/concept1.png",
+            "src": "/public/res/concept1.webp",
             "alt": "Boat instruments in a grid",
           },
         "logo": { "src": "public/res/scientia-logo.svg" },
@@ -30,7 +30,7 @@
         "title": "WilmaInk",
         "coverImage":
           {
-            "src": "https://raw.githubusercontent.com/KaappoRaivio/wilmaInk/master/assets/1.png",
+            "src": "/public/res/1.webp",
             "alt": "My school note on as it would be shown on an e-ink display",
           },
         "logo": { "src": "public/res/wilmaink.svg" },
