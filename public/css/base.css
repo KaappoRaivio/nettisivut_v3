@@ -90,6 +90,17 @@ a {
   font-weight: bold;
   text-decoration: none;
 }
+table {
+  border-collapse: collapse;
+}
+tr {
+  border-bottom: 1px solid #ccc;
+}
+th,
+td {
+  text-align: left;
+  padding: 4px;
+}
 
 ul.no-bullets,
 ol.no-bullets {

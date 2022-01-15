@@ -3,7 +3,7 @@ const express = require("express");
 const fs = require("fs");
 const errorHandler = require("errorhandler");
 
-module.exports = (app, debug) => {
+module.exports = (app, config) => {
   if (process.env.NODE_ENV === "development") {
     app.use(errorHandler({ dumpExceptions: true, showStack: true }));
   }
@@ -18,5 +18,5 @@ module.exports = (app, debug) => {
     })
   );
 
-  if (debug) app.use(morgan(":date[iso] :method :url :status :res[content-length] - :response-time ms"));
+  if (config.debug) app.use(morgan(":date[iso] :method :url :status :res[content-length] - :response-time ms"));
 };

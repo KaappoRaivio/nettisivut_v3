@@ -10,7 +10,7 @@ const hljs = require("highlightjs");
 
 const { Remarkable } = require("remarkable");
 const md = new Remarkable("full", {
-  html: false,
+  html: true,
   xhtmlOut: false,
   breaks: false,
   langPrefix: "language-",
@@ -36,25 +36,27 @@ const md = new Remarkable("full", {
   },
 });
 
-module.exports = async debug => {
+module.exports = async config => {
   const app = express();
-  app.use(
-    helmet({
-      contentSecurityPolicy: {
-        directives: {
-          ...helmet.contentSecurityPolicy.getDefaultDirectives(),
-          "img-src": ["'self'", "*.github.com"],
+  if (!config.debug) {
+    app.use(
+      helmet({
+        contentSecurityPolicy: {
+          directives: {
+            ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+            "img-src": ["'self'"],
+          },
         },
-      },
-    })
-  );
+      })
+    );
+  }
   app.use(compression());
 
-  require("./mylogger")(app, debug);
+  require("./mylogger")(app, config);
 
   const GLOBAL_DATA = yaml.parse(fs.readFileSync("public/data/about.data.yaml", "utf-8"));
-  GLOBAL_DATA.debug = debug;
-  console.log("Debug: ", debug);
+  GLOBAL_DATA.debug = config.debug;
+  console.log("Debug: ", config.debug);
 
   const registerPartials = async () => {
     const templateFilePaths = await glob("templates/**/*.template.html");
@@ -119,7 +121,7 @@ module.exports = async debug => {
     });
   };
 
-  require("./redirectToHttps")(app, debug);
+  require("./redirectToHttps")(app, config);
 
   await registerPartials();
 
@@ -132,6 +134,8 @@ module.exports = async debug => {
     res.status(200);
     res.send(mainTemplate({ ALL: GLOBAL_DATA }));
   });
+
+  await require("./blog")(app, config, GLOBAL_DATA);
 
   return app;
 };

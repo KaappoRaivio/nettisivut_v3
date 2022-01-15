@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prod": "NODE_ENV=production node index.js",
-    "dev": "PORT=3001 nodemon index.js --watch templates --watch public --watch . -e js,html,css,json,yml,yaml"
+    "prod": "NODE_ENV=production X_BLOG_REPOSITORY_PATH=/var/www/blogcontent node index.js",
+    "dev": "PORT=3001 X_BLOG_REPOSITORY_PATH=/home/kaappo/git/blogposts nodemon index.js --watch templates --watch public --watch . -e js,html,css,json,yml,yaml"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "highlightjs": "^9.16.2",
     "markdown-it": "^12.2.0",
     "morgan": "^1.10.0",
+    "node-cache": "^5.1.2",
     "remarkable": "^2.0.1",
     "yaml": "^1.10.2"
   },
