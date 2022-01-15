@@ -24,7 +24,6 @@ const md = new Remarkable("full", {
     console.log(lang);
     if (lang && hljs.getLanguage(lang)) {
       try {
-        console.log(hljs.highlight(lang, str).value);
         return hljs.highlight(lang, str).value;
       } catch (__) {}
     }
@@ -76,7 +75,7 @@ module.exports = async debug => {
       return arg1 === arg2;
     });
     Handlebars.registerHelper("log", (...args) => {
-      console.log(...args);
+      if (!debug) console.log(...args);
     });
     Handlebars.registerHelper("markdown", options => {
       // console.log(options);
