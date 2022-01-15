@@ -81,8 +81,8 @@ module.exports = async debug => {
     Handlebars.registerHelper("markdown", options => {
       // console.log(options);
       // console.log(options.fn());
-      console.log(options.fn());
-      console.log(md.render(options.fn()));
+      // console.log(options.fn());
+      // console.log(md.render(options.fn()));
 
       return md.render(options.fn());
     });
