@@ -5,9 +5,11 @@ const Handlebars = require("handlebars");
 const path = require("path");
 const glob = require("glob-promise");
 const compression = require("compression");
+const helmet = require("helmet");
 
 module.exports = async debug => {
   const app = express();
+  app.use(helmet());
   app.use(compression());
 
   require("./mylogger")(app, debug);
@@ -19,6 +21,7 @@ module.exports = async debug => {
   const registerPartials = async () => {
     const templateFilePaths = await glob("templates/**/*.template.html");
     console.log("Defining the following templates:");
+
     console.group();
     templateFilePaths.forEach(path => console.log(path));
     console.groupEnd();

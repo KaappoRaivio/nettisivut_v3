@@ -21,6 +21,7 @@ const main = async () => {
 
   const app = await makeApp(DEBUG);
 
+
   if (DEBUG) {
     const httpServer = http.createServer(app);
     httpServer.listen(process.env.PORT || 3000);
