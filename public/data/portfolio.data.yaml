@@ -1,0 +1,31 @@
+{
+  "portfolio":
+    [
+      {
+        "title": "Scientia",
+        "coverImage":
+          {
+            "src": "https://raw.githubusercontent.com/KaappoRaivio/Scientia/master/src/assets/readme/concept1.png",
+            "alt": "Boat instruments in a grid",
+          },
+        "logo": { "src": "public/res/scientia-logo.svg" },
+        "previewText": { "language": "html", "content": '<p>Scientia (<code>/ˈsaɪənˌtɪa/</code>) is a boat instrumentation system which uses an open
+              standard, <a href="https://signalk.org/">Signal K</a> as its data source. It''s capable of
+              displaying data from a <a href="https://github.com/SignalK/signalk-server">Signal K server</a>
+              in a clear and uncluttered way.</p>' },
+      },
+      {
+        "title": "WilmaInk",
+        "coverImage":
+          {
+            "src": "https://raw.githubusercontent.com/KaappoRaivio/wilmaInk/master/assets/1.png",
+            "alt": "My school note on as it would be shown on an e-ink display",
+          },
+        "logo": { "src": "public/res/wilmaink.svg" },
+        "previewText":
+          { "language": "html", "content": "<p>WilmaInk is a sister of my other project Wilmacrawler, which it uses as a back-end. WilmaInk
+              presents the data in a form that can be rendered on an e-ink display. This means limited resution, and very limited color palette, in my e-ink display's case 3 colors:
+              black, white, and red.</p>" },
+      },
+    ],
+}

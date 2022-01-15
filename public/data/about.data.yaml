@@ -1,0 +1,14 @@
+{
+  "navbarLinks":
+    [{ text: "Home", href: "/" }, { text: "Portfolio", href: "/portfolio" }, { text: "CV", href: "CV" }, { text: "About", href: "/about" }],
+  "home": { "whoAmI": { "language": "html", "content": "<p>
+            My name is Kaappo, I'm 18 years old and I currently I study at Otaniemi Upper Secondary School at their
+            mathematics and science program. I have programmed since I was six, and thus programming is very close
+            to my heart. Despite my relatively young age, I have a lot of experience developing software, both
+            professionally and for fun.
+            </p>
+            <p>
+            In addition to programming, my hobbies include photography, all event technology -related matters, and
+            playing the guitar.
+            </p>" } },
+}

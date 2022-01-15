@@ -1,0 +1,4 @@
+{
+  "navbarLinks":
+    [{ text: "Home", href: "/" }, { text: "Portfolio", href: "/portfolio" }, { text: "CV", href: "CV" }, { text: "About", href: "/about" }],
+}
