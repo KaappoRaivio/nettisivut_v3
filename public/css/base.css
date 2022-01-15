@@ -1,7 +1,8 @@
 :root {
   --primary-color: black;
   --secondary-color: #595959;
-  --tertiary-color: #7f7f7f;
+  --tertiary-color: #c0c0c0;
+  --quartic-color: #f1f1f1;
   --landing-accent: white;
   --background-color: white;
 }
@@ -33,6 +34,28 @@ h2 {
   font-size: 250%;
   margin-bottom: 2%;
 }
+
+blockquote {
+  margin: 0;
+  padding: 0 1em;
+  color: var(--secondary-color);
+  border-left: 0.25em solid var(--tertiary-color);
+}
+
+dt {
+  font-weight: bold;
+}
+
+code {
+  background-color: rgba(175, 184, 193, 0.2);
+  padding: 0.2em 0.4em;
+  border-radius: 0.4em;
+}
+
+pre code {
+  background: transparent;
+}
+
 header {
   width: var(--content-width);
   position: relative;

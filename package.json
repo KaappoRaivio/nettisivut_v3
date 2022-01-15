@@ -22,12 +22,16 @@
     "compression": "^1.7.4",
     "errorhandler": "^1.5.1",
     "express": "^4.17.1",
+    "glimmer": "^1.1.5",
     "glob": "^7.2.0",
     "glob-promise": "^4.2.2",
     "handlebars": "^4.7.7",
     "helmet": "^5.0.1",
+    "helper-markdown": "^1.0.0",
+    "highlightjs": "^9.16.2",
     "markdown-it": "^12.2.0",
     "morgan": "^1.10.0",
+    "remarkable": "^2.0.1",
     "yaml": "^1.10.2"
   },
   "devDependencies": {

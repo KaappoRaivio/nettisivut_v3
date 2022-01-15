@@ -6,10 +6,49 @@ const path = require("path");
 const glob = require("glob-promise");
 const compression = require("compression");
 const helmet = require("helmet");
+const hljs = require("highlightjs");
+
+const { Remarkable } = require("remarkable");
+const md = new Remarkable("full", {
+  html: false,
+  xhtmlOut: false,
+  breaks: false,
+  langPrefix: "language-",
+  linkify: true,
+  linkTarget: "",
+
+  typographer: true,
+
+  quotes: "“”‘’",
+  highlight: function (str, lang) {
+    console.log(lang);
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        console.log(hljs.highlight(lang, str).value);
+        return hljs.highlight(lang, str).value;
+      } catch (__) {}
+    }
+
+    try {
+      return hljs.highlightAuto(str).value;
+    } catch (__) {}
+
+    return ""; // use external default escaping
+  },
+});
 
 module.exports = async debug => {
   const app = express();
-  app.use(helmet());
+  app.use(
+    helmet({
+      contentSecurityPolicy: {
+        directives: {
+          ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+          "img-src": ["'self'", "*.github.com"],
+        },
+      },
+    })
+  );
   app.use(compression());
 
   require("./mylogger")(app, debug);
@@ -38,6 +77,18 @@ module.exports = async debug => {
     });
     Handlebars.registerHelper("log", (...args) => {
       console.log(...args);
+    });
+    Handlebars.registerHelper("markdown", options => {
+      // console.log(options);
+      // console.log(options.fn());
+      console.log(options.fn());
+      console.log(md.render(options.fn()));
+
+      return md.render(options.fn());
+    });
+    Handlebars.registerHelper("include", includePath => {
+      console.log(includePath);
+      return fs.readFileSync(path.join(__dirname, includePath), "utf-8");
     });
   };
 

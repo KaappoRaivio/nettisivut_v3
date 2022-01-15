@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    {{> head}}
+  </head>
+
+  <body>
+    <div id="top">
+      {{> simpleGreeting}} {{> stickyheader}}
+
+      <div class="content-wrapper">
+        <main class="content content--wide">{{#markdown}} {{{include "public/data/portfolio/portfolio.md"}}} {{/markdown}}</main>
+      </div>
+    </div>
+  </body>
+</html>
