@@ -16,7 +16,7 @@
 
           <ul class="no-bullets add-horizontal-rule">
             <li>
-              {{#each posts}}
+              {{#each (reverseArray posts)}}
 
               <h3 class="portfolio-header" id="{{this.title}}">{{this.title}}</h3>
               <div class="columns blogIndex-item--container unlimited-height-on-single-column">
