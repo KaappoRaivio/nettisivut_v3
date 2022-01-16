@@ -48,6 +48,15 @@
   .unlimited-height-on-single-column {
     max-height: unset !important;
   }
+
+  .content {
+    /*position: relative;*/
+    font-size: 400% !important;
+    /*padding: 0 2%;*/
+    /*width: var(--content-width);*/
+    /*background: var(--background-color);*/
+    /*overflow: visible;*/
+  }
 }
 
 @media screen and (min-width: 992px) {

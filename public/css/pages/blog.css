@@ -11,7 +11,7 @@
 
 .blogIndex-item--previewText {
   display: inline-block;
-  max-height: 15em;
+  max-height: 20em;
 
   text-overflow: ellipsis;
   overflow: hidden;
@@ -36,4 +36,8 @@
 
 #blogpost-links-container__right {
   flex: 1 0;
+}
+
+.blog-content p {
+  font-size: 75%;
 }
