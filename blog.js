@@ -128,6 +128,7 @@ module.exports = async (app, config, GLOBAL_DATA) => {
                 src: path.join("/blog/post/", id, coverImage.src),
               },
               id,
+              cleanTitle: getSlug(title),
             };
           })
         ),

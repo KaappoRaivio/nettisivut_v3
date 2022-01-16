@@ -11,21 +11,25 @@
 
       <div class="content-wrapper">
         <main class="content">
-          <h2 id="Blog">Blog</h2>
+          <h2 id="Blog">My Blog</h2>
           <p>Find out what I have rambled about lately:</p>
 
           <ul class="no-bullets add-horizontal-rule">
             <li>
               {{#each (reverseArray posts)}}
 
-              <h3 class="portfolio-header" id="{{this.title}}">{{this.title}}</h3>
+              <a class="black" href="/blog/post/{{this.id}}">
+                <h3 class="portfolio-header" id="{{this.cleanTitle}}">{{this.title}}</h3>
+              </a>
               <div class="columns blogIndex-item--container unlimited-height-on-single-column">
-                <img class="blogIndex-item--coverimage" src="{{this.coverImage.src}}" alt="{{this.coverImage.alt}}" />
+                <a class="black" href="/blog/post/{{this.id}}">
+                  <img class="blogIndex-item--coverimage" src="{{this.coverImage.src}}" alt="{{this.coverImage.alt}}"
+                /></a>
                 <div>
                   <p class="blogIndex-item--previewText force-wrap">{{this.previewText}}</p>
                 </div>
               </div>
-              <a class="read-more" href="/blog/post/{{this.id}}"></a>
+              <a class="read-more" href="/blog/post/{{this.id}}/{{this.title}}"></a>
 
               {{/each}}
             </li>
