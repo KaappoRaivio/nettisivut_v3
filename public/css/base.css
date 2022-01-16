@@ -140,3 +140,11 @@ li img:after {
   grid-gap: 4%;
   grid-template-columns: repeat(var(--columns), 1fr);
 }
+
+.columns p {
+  margin-top: 0;
+}
+
+.force-wrap {
+  overflow-wrap: break-word;
+}

@@ -54,7 +54,7 @@ module.exports = async config => {
 
   require("./mylogger")(app, config);
 
-  const GLOBAL_DATA = yaml.parse(fs.readFileSync("public/data/about.data.yaml", "utf-8"));
+  const GLOBAL_DATA = yaml.parse(fs.readFileSync("public/data/ALL.data.yaml", "utf-8"));
   GLOBAL_DATA.debug = config.debug;
   console.log("Debug: ", config.debug);
 

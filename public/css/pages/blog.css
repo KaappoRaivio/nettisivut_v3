@@ -1,0 +1,19 @@
+.blogIndex-item--coverimage {
+  /*aspect-ratio: calc(3 / 2);*/
+  /*min-height: 10em;*/
+  height: 15em;
+  object-fit: cover;
+}
+
+.blogIndex-item--container {
+  max-height: 15em;
+}
+
+.blogIndex-item--previewText {
+  display: inline-block;
+  max-height: 15em;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 75%;
+}

@@ -5,6 +5,7 @@
 @import url("pages/landing.css");
 @import url("pages/portfolio.css");
 @import url("pages/cv.css");
+@import url("pages/blog.css");
 
 @import url("fragments/stickyheader.css");
 @import url("fragments/simpleGreeting.css");

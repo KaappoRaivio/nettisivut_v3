@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    {{> head}}
+  </head>
+
+  <body>
+    <div id="top">
+      {{> simpleGreeting}} {{> stickyheader}}
+
+      <div class="content-wrapper">
+        <main class="content">
+          <h2 id="Blog">Blog</h2>
+          <p>Find out what I have rambled about lately:</p>
+
+          <ul class="no-bullets add-horizontal-rule">
+            <li>
+              {{#each posts}}
+
+              <h3 class="portfolio-header" id="{{this.title}}">{{this.title}}</h3>
+              <div class="columns blogIndex-item--container">
+                <img class="blogIndex-item--coverimage" src="{{this.coverImage.src}}" alt="{{this.coverImage.alt}}" />
+                <!--                <div>-->
+                <!--                  <img class="portfolio-logo" loading="lazy" src="{{this.logo.src}}" alt="" />-->
+
+                <p class="blogIndex-item--previewText force-wrap">{{this.previewText}}</p>
+                <!--                </div>-->
+              </div>
+              <a class="read-more" href="/blog/post/{{this.id}}/{{this.title}}"></a>
+
+              {{/each}}
+            </li>
+          </ul>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

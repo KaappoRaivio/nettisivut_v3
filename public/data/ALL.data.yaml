@@ -1,4 +1,10 @@
 {
   "navbarLinks":
-    [{ text: "Home", href: "/" }, { text: "Portfolio", href: "/portfolio" }, { text: "CV", href: "CV" }, { text: "About", href: "/about" }],
+    [
+      { text: "Home", href: "/" },
+      { text: "Portfolio", href: "/portfolio" },
+      { text: "CV", href: "/CV" },
+      { text: "Blog", href: "/blog" },
+      { text: "About", href: "/about" },
+    ],
 }
