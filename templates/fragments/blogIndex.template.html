@@ -21,11 +21,9 @@
               <h3 class="portfolio-header" id="{{this.title}}">{{this.title}}</h3>
               <div class="columns blogIndex-item--container">
                 <img class="blogIndex-item--coverimage" src="{{this.coverImage.src}}" alt="{{this.coverImage.alt}}" />
-                <!--                <div>-->
-                <!--                  <img class="portfolio-logo" loading="lazy" src="{{this.logo.src}}" alt="" />-->
-
+                {{#unless (equals this.previewText "")}}
                 <p class="blogIndex-item--previewText force-wrap">{{this.previewText}}</p>
-                <!--                </div>-->
+                {{/if}}
               </div>
               <a class="read-more" href="/blog/post/{{this.id}}"></a>
 
