@@ -19,6 +19,7 @@
 
 .read-more {
   display: inline-block;
+  clear: both;
   width: 100%;
   text-align: right;
 
@@ -28,4 +29,5 @@
 
 .read-more:after {
   content: "Continue reading»";
+  clear: both;
 }

@@ -6,6 +6,10 @@
   #greeting-text {
     justify-content: center;
   }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
 }
 
 @media screen and (min-width: 600px) {
@@ -16,6 +20,10 @@
   #greeting-text {
     padding-left: 10%;
   }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -25,6 +33,20 @@
   }
   #greeting-text {
     padding-left: 15%;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hide-on-single-column {
+    display: none !important;
+  }
+
+  .unlimited-height-on-single-column {
+    max-height: unset !important;
   }
 }
 
