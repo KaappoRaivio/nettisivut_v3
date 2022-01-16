@@ -1,4 +1,8 @@
 <div id="simple-decoration-image-wrapper">
+  {{#unless src}}
   <div id="simple-decoration-image"></div>
+  {{else}}
+  <div id="simple-decoration-image" style="background-image: url('{{src}}')"></div>
+  {{/unless}}
   <!--    <img id="simple-decoration-image" src="/public/res/DSC_137_background.webp" loading="lazy"/>-->
 </div>

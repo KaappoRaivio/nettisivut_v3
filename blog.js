@@ -55,7 +55,7 @@ module.exports = async (app, config, GLOBAL_DATA) => {
     }
 
     let postContent;
-    if (config.debug && cache.get(id)) {
+    if (!config.debug && cache.get(id)) {
       postContent = cache.get(id);
     } else {
       const postContentPath = path.join(postsRoot, id, "index.md");
@@ -69,6 +69,9 @@ module.exports = async (app, config, GLOBAL_DATA) => {
       cache.set(id, postContent);
     }
 
+    const postYamlPath = path.join(postsRoot, id, "post.yaml");
+    console.log(postYamlPath);
+
     const data = {
       ALL: GLOBAL_DATA,
       content: postContent,
@@ -76,6 +79,7 @@ module.exports = async (app, config, GLOBAL_DATA) => {
       isLast: parseInt(id) === postFolders.length,
       currentPostId: id,
       amountOfPosts: postFolders.length,
+      coverImageSrc: yaml.parse(await fsp.readFile(postYamlPath, "utf-8"))?.coverImage?.src,
     };
     res.status(200).send(blogpostTemplate(data));
   });
