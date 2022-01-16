@@ -8,6 +8,7 @@ const yaml = require("yaml");
 const cache = new NodeCache();
 const Handlebars = require("handlebars");
 const express = require("express");
+const getSlug = require("speakingurl");
 
 const sanitizePath = filePath => {
   return path.normalize(filePath).replace(/^(\.\.(\/|\\|$))+/, "");
@@ -30,8 +31,28 @@ module.exports = async (app, config, GLOBAL_DATA) => {
 
   const blogpostTemplate = Handlebars.compile("{{> blogpost this}}");
 
+  app.get("/blog/post/:id", async (req, res, err) => {
+    const { id } = req.params;
+    console.log("asd", id);
+
+    let postIndex = id - 1;
+    if (postIndex === -1) res.sendStatus(404);
+
+    const postConfig = yaml.parse(await fsp.readFile(path.join(postFolders[postIndex], "post.yaml"), "utf-8"));
+    res.redirect(301, path.join("/blog/post", id, getSlug(postConfig.title)));
+  });
+
   app.get("/blog/post/:id/:title", async (req, res, err) => {
+    const { action } = req.query;
     const { id, title } = req.params;
+    if (action === "nextPost") {
+      console.log("moi");
+      res.redirect(301, `/blog/post/${parseInt(id) + 1}`);
+      return;
+    } else if (action === "previousPost") {
+      res.redirect(301, `/blog/post/${parseInt(id) - 1}`);
+      return;
+    }
 
     let postContent;
     if (config.debug && cache.get(id)) {
@@ -48,7 +69,14 @@ module.exports = async (app, config, GLOBAL_DATA) => {
       cache.set(id, postContent);
     }
 
-    const data = { ALL: GLOBAL_DATA, content: postContent };
+    const data = {
+      ALL: GLOBAL_DATA,
+      content: postContent,
+      isFirst: parseInt(id) === 1,
+      isLast: parseInt(id) === postFolders.length,
+      currentPostId: id,
+      amountOfPosts: postFolders.length,
+    };
     res.status(200).send(blogpostTemplate(data));
   });
 
@@ -99,26 +127,6 @@ module.exports = async (app, config, GLOBAL_DATA) => {
             };
           })
         ),
-        // posts: [
-        //   {
-        //     title: "first",
-        //     previewText:
-        //       "Chicken tastes best with peppermint tea and lots of vegemite. Mix the okra with ripe cinnamon, pepper, chipotle chile powder, and corn syrup making sure to cover all of it. Everyone loves the consistency of chicken salad flavord with smashed dill.",
-        //     coverImage: {
-        //       src: "/public/res/header_background.webp",
-        //     },
-        //     id: 1,
-        //   },
-        //   {
-        //     title: "second",
-        //     previewText:
-        //       "Aye, yer not enduring me without a yellow fever! Where is the lively mate? The parrot raids with madness, rob the freighter until it whines.Greed, power, and life.",
-        //     coverImage: {
-        //       src: "/public/res/1.webp",
-        //     },
-        //     id: 1,
-        //   },
-        // ],
       };
       cache.set("blogData", data, 600);
     }

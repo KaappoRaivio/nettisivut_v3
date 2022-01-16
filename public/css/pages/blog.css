@@ -17,3 +17,23 @@
   overflow: hidden;
   font-size: 75%;
 }
+
+#blogpost-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#blogpost-links-container p {
+  /*display: inline;*/
+  margin: 0;
+  text-align: center;
+}
+
+#blogpost-links-container__left {
+  flex: 1 0;
+}
+
+#blogpost-links-container__right {
+  flex: 1 0;
+}

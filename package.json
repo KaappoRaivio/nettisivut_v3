@@ -35,6 +35,8 @@
     "morgan": "^1.10.0",
     "node-cache": "^5.1.2",
     "remarkable": "^2.0.1",
+    "sanitize-filename": "^1.6.3",
+    "speakingurl": "^14.0.1",
     "yaml": "^1.10.2"
   },
   "devDependencies": {

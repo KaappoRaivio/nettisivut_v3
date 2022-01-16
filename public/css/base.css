@@ -148,3 +148,7 @@ li img:after {
 .force-wrap {
   overflow-wrap: break-word;
 }
+
+.align-right {
+  text-align: right;
+}

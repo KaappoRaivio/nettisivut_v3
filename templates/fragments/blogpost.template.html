@@ -10,8 +10,24 @@
       {{> simpleGreeting}} {{> stickyheader}}
 
       <div class="content-wrapper">
-        <main class="content">{{#markdown}} {{{../content}}} {{/markdown}}</main>
+        <div class="content">
+          <main>{{#markdown}} {{{../content}}} {{/markdown}}</main>
+          <footer id="blogpost-links-container">
+            {{#unless isFirst}}
+            <a id="blogpost-links-container__left" href="?action=previousPost">Previous post</a>
+            {{else}}
+            <a id="blogpost-links-container__left"></a>
+            {{/unless}}
+            <p>{{currentPostId}} / {{amountOfPosts}}</p>
+            {{#unless isLast}}
+            <a id="blogpost-links-container__right" class="align-right" href="?action=nextPost">Next post</a>
+            {{else}}
+            <a id="blogpost-links-container__right"></a>
+            {{/unless}}
+          </footer>
+        </div>
       </div>
+      {{> footer}}
     </div>
   </body>
 </html>
