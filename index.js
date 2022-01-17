@@ -20,9 +20,9 @@ const main = async () => {
     const httpServer = http.createServer(app);
     httpServer.listen(config.port.debug);
   } else {
-    const app = express();
-    redirectToHttps(app);
-    const httpServer = http.createServer(app);
+    const redirector = express();
+    redirectToHttps(redirector);
+    const httpServer = http.createServer(redirector);
     httpServer.listen(80);
     const httpsServer = https.createServer(getCertificates(config), app);
     httpsServer.listen(config.port.production, () => {
