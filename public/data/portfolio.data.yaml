@@ -2,6 +2,18 @@
   "portfolio":
     [
       {
+        "title": "Raytracer",
+        "coverImage": { "src": "/public/res/raytracing.jpg", "alt": "A raytraced scene" },
+        "logo": { "src": "" },
+        "previewText":
+          {
+            "language": "html",
+            "content": "<p>I have written a raytracer completely from scratch, only using OpenGL for setting pixel colors on the screen.
+              It supports diffuse and specular reflections, different materials and shapes, as well as reading a mesh from a .obj file. It's written in c++, and can render
+              the shown demo image in under ten seconds.</p>",
+          },
+      },
+      {
         "title": "Scientia",
         "coverImage": { "src": "public/res/concept1.webp", "alt": "Boat instruments in a grid" },
         "logo": { "src": "public/res/scientia-logo.svg" },

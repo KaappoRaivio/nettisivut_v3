@@ -72,6 +72,10 @@
   #greeting-text {
     padding-left: 20%;
   }
+  .half-width-on-wide {
+    width: 50% !important;
+    margin-bottom: 0% !important;
+  }
 }
 
 @media screen and (min-width: 1200px) {

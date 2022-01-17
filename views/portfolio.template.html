@@ -18,13 +18,11 @@
             <li>
               {{#each portfolio}}
               <h3 class="portfolio-header" id="{{this.title}}">{{this.title}}</h3>
-              <div class="columns">
-                <img src="{{this.coverImage.src}}" alt="{{this.coverImage.alt}}" />
-                <div>
-                  <img class="portfolio-logo" loading="lazy" src="{{this.logo.src}}" alt="" />
+              <div class="">
+                <img src="{{this.coverImage.src}}" alt="{{this.coverImage.alt}}" class="portfolio-cover half-width-on-wide" />
+                <img class="portfolio-logo" loading="lazy" src="{{this.logo.src}}" alt="" />
 
-                  {{{this.previewText.content}}}
-                </div>
+                {{{this.previewText.content}}}
               </div>
               {{/each}}
             </li>
