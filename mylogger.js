@@ -2,13 +2,12 @@ const morgan = require("morgan");
 const express = require("express");
 const fs = require("fs");
 const errorHandler = require("errorhandler");
+const config = require("./config/config.js");
 
-module.exports = (app, config) => {
-  if (process.env.NODE_ENV === "development") {
+module.exports = app => {
+  if (config.debug) {
     app.use(errorHandler({ dumpExceptions: true, showStack: true }));
-  }
-
-  if (process.env.NODE_ENV === "production") {
+  } else {
     app.use(errorHandler());
   }
 

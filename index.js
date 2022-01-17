@@ -6,18 +6,10 @@ const fs = require("fs");
 
 const redirectToHttps = require("./redirectToHttps");
 
-const getCertificates = config => {
-  if (config.debug) return;
-  const key = fs.readFileSync(config.SSL.privateKey, "utf8");
-  const cert = fs.readFileSync(config.SSL.certificate, "utf8");
-  const ca = fs.readFileSync(config.SSL.chain, "utf8");
-  return { key, cert, ca };
-};
-
 const makeApp = require("./app");
 
 const main = async () => {
-  const config = require("./config");
+  const config = require("./config/config");
   const DEBUG = config.debug;
 
   const app = await makeApp(config);
