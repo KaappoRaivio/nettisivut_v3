@@ -3,10 +3,12 @@
 const https = require("https");
 const http = require("http");
 const fs = require("fs");
+const { getCertificates } = require("./config/credentials");
 
 const redirectToHttps = require("./redirectToHttps");
 
 const makeApp = require("./app");
+const express = require("express");
 
 const main = async () => {
   const config = require("./config/config");
@@ -18,7 +20,9 @@ const main = async () => {
     const httpServer = http.createServer(app);
     httpServer.listen(config.port.debug);
   } else {
-    const httpServer = http.createServer(redirectToHttps());
+    const app = express();
+    redirectToHttps(app);
+    const httpServer = http.createServer(app);
     httpServer.listen(80);
     const httpsServer = https.createServer(getCertificates(config), app);
     httpsServer.listen(config.port.production, () => {

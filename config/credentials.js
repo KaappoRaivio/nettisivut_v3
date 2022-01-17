@@ -8,3 +8,4 @@ const getCertificates = () => {
   const ca = fs.readFileSync(config.SSL.chain, "utf8");
   return { key, cert, ca };
 };
+module.exports = { getCertificates };
