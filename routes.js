@@ -16,6 +16,7 @@ module.exports = async app => {
 
   const pages = await db.getStaticPages();
   pages.forEach(({ pageName, pageTemplate, pageData }) => {
+    console.log(pageName);
     app.get(`/${pageName}`, (req, res) => {
       res.status(200).send(pageTemplate(pageData));
     });

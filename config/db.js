@@ -27,7 +27,7 @@ module.exports = {
     return GLOBAL_DATA;
   },
   getStaticPages: async () => {
-    const pageFilePaths = await globp("templates/pages/**/*.template.html");
+    const pageFilePaths = await globp("views/**/*.template.html");
     // console.log("Defining the following pages:");
     // console.group();
     // pageFilePaths.forEach(path => console.log(path));
@@ -35,7 +35,7 @@ module.exports = {
 
     return pageFilePaths.map(pageFilePath => {
       const pageTemplate = Handlebars.compile(fs.readFileSync(pageFilePath, "utf-8"));
-      const pageDataPath = ["public/data", ...pageFilePath.split("/").slice(2)].join("/").replace(".template.html", ".data.yaml");
+      const pageDataPath = ["public/data", ...pageFilePath.split("/").slice(1)].join("/").replace(".template.html", ".data.yaml");
       let pageData = {};
       if (fs.existsSync(pageDataPath)) {
         try {
@@ -44,13 +44,13 @@ module.exports = {
           console.error(e);
         }
       }
-      const pageName = pageFilePath.split("/").slice(2).join("/").replace(".template.html", "");
+      const pageName = pageFilePath.split("/").slice(1).join("/").replace(".template.html", "");
 
       return { pageTemplate, pageData: { ...pageData, ALL: GLOBAL_DATA }, pageName };
     });
   },
   getLandingPage: () => {
-    const mainTemplate = Handlebars.compile(fs.readFileSync("templates/pages/landing.template.html", "utf-8"));
+    const mainTemplate = Handlebars.compile(fs.readFileSync("views/landing.template.html", "utf-8"));
     return mainTemplate({ ALL: GLOBAL_DATA });
   },
 
@@ -78,8 +78,6 @@ module.exports = {
         })
       ),
     };
-
-    // res.status(200).send(blogIndexTemplate(data));
   },
 
   getBlogAsset: async (id, localFilePath) => {

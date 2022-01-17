@@ -13,7 +13,6 @@ const config = require("./config/config.js");
 const myLogger = require("./mylogger");
 const redirectToHttps = require("./redirectToHttps");
 const routes = require("./routes");
-const blog = require("./blog");
 
 const { Remarkable } = require("remarkable");
 const md = new Remarkable("full", {
@@ -44,7 +43,7 @@ const md = new Remarkable("full", {
 });
 
 const prepareHandlebars = async () => {
-  const templateFilePaths = await glob("templates/**/*.template.html");
+  const templateFilePaths = await glob("templates/fragments/**/*.template.html");
   console.log("Defining the following templates:");
 
   console.group();
