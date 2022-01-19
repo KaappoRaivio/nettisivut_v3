@@ -49,6 +49,9 @@ module.exports = {
       return { pageTemplate, pageData: { ...pageData, ALL: GLOBAL_DATA }, pageName };
     });
   },
+  getBoilerplateTemplate: async () => {
+    return Handlebars.compile(await fsp.readFile("views/BOILERPLATE.template.html", "utf-8"));
+  },
   getLandingPage: () => {
     const mainTemplate = Handlebars.compile(fs.readFileSync("views/landing.template.html", "utf-8"));
     return mainTemplate({ ALL: GLOBAL_DATA });

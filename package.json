@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prod": "NODE_ENV=production X_BLOG_REPOSITORY_PATH=/var/www/blogcontent node index.js",
-    "dev": "PORT=3001 X_BLOG_REPOSITORY_PATH=/home/kaappo/git/blogposts nodemon index.js --watch views --watch public --watch . -e js,html,css,json,yml,yaml"
+    "dev": "PORT=3001 X_BLOG_REPOSITORY_PATH=/home/kaappo/git/blogposts nodemon index.js --watch views --watch public --watch . -e js,html,css,json,yml,yaml",
+    "daemonprod": "NODE_ENV=production X_BLOG_REPOSITORY_PATH=/var/www/blogcontent forever start index.js"
   },
   "repository": {
     "type": "git",

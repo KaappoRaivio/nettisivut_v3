@@ -14,11 +14,13 @@ module.exports = async app => {
   app.use("/public", express.static(path.join(__dirname, "/public")));
   app.use("/.well-known", express.static(path.join(__dirname, "/.well-known")));
 
+  const boileplateTempalte = await db.getBoilerplateTemplate();
+
   const pages = await db.getStaticPages();
   pages.forEach(({ pageName, pageTemplate, pageData }) => {
     console.log(pageName);
-    app.get(`/${pageName}`, (req, res) => {
-      res.status(200).send(pageTemplate(pageData));
+    app.get(`/${pageName}`, async (req, res) => {
+      res.status(200).send(boileplateTempalte({ ALL: await db.getGlobalData(), content: pageTemplate(pageData) }));
     });
   });
 
