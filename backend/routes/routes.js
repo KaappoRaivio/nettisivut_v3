@@ -6,7 +6,6 @@ module.exports = config => {
   const model = modelFactory(config);
 
   router.get("/blog/posts", async (req, res) => {
-    console.log("moi");
     res.status(200).json(await model.getBlogposts());
   });
 

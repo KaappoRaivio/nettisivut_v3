@@ -17,13 +17,13 @@
           <br />
           <footer id="blogpost-links-container">
             {{#unless isFirst}}
-            <a id="blogpost-links-container__left" href="{{meta.slug}}/previousPost">Previous post</a>
+            <a id="blogpost-links-container__left" href="{{slug}}/previousPost">Previous post</a>
             {{else}}
             <a id="blogpost-links-container__left"></a>
             {{/unless}}
             <p>{{currentPostId}} / {{amountOfPosts}}</p>
             {{#unless isLast}}
-            <a id="blogpost-links-container__right" class="align-right" href="{{meta.slug}}/nextPost">Next post</a>
+            <a id="blogpost-links-container__right" class="align-right" href="{{slug}}/nextPost">Next post</a>
             {{else}}
             <a id="blogpost-links-container__right"></a>
             {{/unless}}

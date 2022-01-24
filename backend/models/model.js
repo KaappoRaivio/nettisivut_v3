@@ -12,7 +12,11 @@ module.exports = config => {
     },
 
     getBlogpost: async id => {
-      return await (await db).get("SELECT * FROM blogposts WHERE id = ?", id);
+      const post = await (await db).get("SELECT * FROM blogposts WHERE id = ?", id);
+      return {
+        ...post,
+        previewText: "Not available",
+      };
     },
   };
 };

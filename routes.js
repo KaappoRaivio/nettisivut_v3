@@ -49,14 +49,18 @@ module.exports = async app => {
 
   app.get("/blog/post/:id", async (req, res, err) => {
     const { id } = req.params;
+    console.log("paska");
 
     let postIndex = id - 1;
     if (postIndex === -1) res.sendStatus(404);
 
     try {
-      const { postContent, meta } = await db.getBlogPost(id);
-      res.redirect(301, path.join("/blog/post", id, meta.slug));
+      const {
+        templateData: { slug },
+      } = await db.getBlogPost(id);
+      res.redirect(301, path.join("/blog/post", id, slug));
     } catch (e) {
+      console.error(e);
       res.sendStatus(404);
     }
   });
@@ -75,7 +79,7 @@ module.exports = async app => {
   app.get("/blog/post/:id/:title", async (req, res, err) => {
     const { id, title } = req.params;
 
-    const { templateData, meta } = await db.getBlogPost(id);
-    res.status(200).send(blogpostTemplate({ ...templateData, meta }));
+    const { templateData } = await db.getBlogPost(id);
+    res.status(200).send(blogpostTemplate({ ...templateData }));
   });
 };

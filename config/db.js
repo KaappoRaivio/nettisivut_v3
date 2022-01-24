@@ -64,7 +64,7 @@ module.exports = {
 
   getBlogPosts: async () => {
     const posts = await (await fetch("api/v1/blog/posts")).json();
-    console.log(posts);
+    // console.log(posts);
     return {
       ALL: GLOBAL_DATA,
       posts: posts,
@@ -82,27 +82,20 @@ module.exports = {
   },
 
   getBlogPost: async id => {
-    const postContentPath = path.join(postsRoot, id, "index.md");
-    const postYamlPath = path.join(postsRoot, id, "post.yaml");
+    const data = await (await fetch(`api/v1/blog/post/${id}`)).json();
+    console.log(data);
+    const { title, slug, content, author } = data;
 
-    if (fs.existsSync(postContentPath) && fs.existsSync(postYamlPath)) {
-      const postContent = await fsp.readFile(postContentPath, "utf-8");
-      const meta = yaml.parse(await fsp.readFile(postYamlPath, "utf-8"));
-      meta.slug = getSlug(meta.title);
+    const templateData = {
+      ALL: GLOBAL_DATA,
+      content,
+      isFirst: parseInt(id) === 1,
+      isLast: parseInt(id) === postFolders.length,
+      currentPostId: id,
+      slug,
+      amountOfPosts: postFolders.length,
+    };
 
-      const templateData = {
-        ALL: GLOBAL_DATA,
-        content: postContent,
-        isFirst: parseInt(id) === 1,
-        isLast: parseInt(id) === postFolders.length,
-        currentPostId: id,
-        amountOfPosts: postFolders.length,
-        coverImageSrc: meta?.coverImage?.src,
-      };
-
-      return { postContent, meta, templateData };
-    } else {
-      return Promise.reject("Not found");
-    }
+    return { postContent: content, templateData };
   },
 };
