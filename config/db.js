@@ -10,6 +10,7 @@ const Handlebars = require("handlebars");
 const path = require("path");
 const fsp = require("fs/promises");
 const getSlug = require("slug");
+const fetch = import("node-fetch");
 
 const GLOBAL_DATA = yaml.parse(fs.readFileSync("public/data/ALL.data.yaml", "utf-8"));
 GLOBAL_DATA.debug = config.debug;
