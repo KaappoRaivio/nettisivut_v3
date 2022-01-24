@@ -10,11 +10,12 @@ const redirectToHttps = require("./redirectToHttps");
 const makeApp = require("./app");
 const express = require("express");
 
+const config = require("./config/config");
 const main = async () => {
-  const config = require("./config/config");
   const DEBUG = config.debug;
 
   const app = await makeApp(config);
+  app.use("/api/v1", require("./backend/app")(config));
 
   if (DEBUG) {
     const httpServer = http.createServer(app);
@@ -32,3 +33,4 @@ const main = async () => {
 };
 
 main().catch(err => console.error(err));
+module.exports = makeApp(config);

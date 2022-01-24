@@ -38,7 +38,7 @@ const md = new Remarkable("full", {
       return hljs.highlightAuto(str).value;
     } catch (__) {}
 
-    return ""; // use external default escaping
+    return "";
   },
 });
 

@@ -1,0 +1,19 @@
+{
+  "name": "nettisivut-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js --watch views --watch public --watch . -e js,html,css,json,yml,yaml"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "sqlite-async": "^1.1.2"
+  }
+}

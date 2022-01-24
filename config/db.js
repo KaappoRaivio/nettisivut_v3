@@ -10,7 +10,11 @@ const Handlebars = require("handlebars");
 const path = require("path");
 const fsp = require("fs/promises");
 const getSlug = require("slug");
-const fetch = import("node-fetch");
+const nodeFetch = import("node-fetch");
+
+const fetch = async url => {
+  return nodeFetch.then(a => a.default(`http://localhost:${config.port.debug}/${url}`));
+};
 
 const GLOBAL_DATA = yaml.parse(fs.readFileSync("public/data/ALL.data.yaml", "utf-8"));
 GLOBAL_DATA.debug = config.debug;
@@ -59,28 +63,11 @@ module.exports = {
   },
 
   getBlogPosts: async () => {
+    const posts = await (await fetch("api/v1/blog/posts")).json();
+    console.log(posts);
     return {
       ALL: GLOBAL_DATA,
-      posts: await Promise.all(
-        postFolders.map(async postFolder => {
-          const { previewText, title, coverImage } = yaml.parse(await fsp.readFile(path.join(postFolder, "post.yaml"), "utf-8"));
-          const id = postFolder
-            .split("/")
-            .slice(postFolder.split("/").length - 1)
-            .join("/");
-
-          return {
-            title,
-            previewText,
-            coverImage: {
-              ...coverImage,
-              src: path.join("/blog/post/", id, coverImage.src),
-            },
-            id,
-            cleanTitle: getSlug(title),
-          };
-        })
-      ),
+      posts: posts,
     };
   },
 

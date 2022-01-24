@@ -14,4 +14,7 @@ module.exports = {
   blog: {
     repositoryPath: process.env.X_BLOG_REPOSITORY_PATH || path.join(__dirname, "blogcontent"),
   },
+  backend: {
+    databaseFilepath: process.env.X_DATABASE_PATH || "/home/kaappo/Desktop/db.db",
+  },
 };
