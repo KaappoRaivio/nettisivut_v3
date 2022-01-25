@@ -6,7 +6,6 @@ module.exports = config => {
       const posts = await (await db).all("SELECT * FROM blogposts");
       return posts.map(post => ({
         ...post,
-        previewText: "Not available",
         cleanTitle: post.slug,
       }));
     },
@@ -15,7 +14,6 @@ module.exports = config => {
       const post = await (await db).get("SELECT * FROM blogposts WHERE id = ?", id);
       return {
         ...post,
-        previewText: "Not available",
       };
     },
   };
