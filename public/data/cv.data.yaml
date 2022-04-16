@@ -92,7 +92,7 @@
             content:
               ['<acronym title="Hypertext Markup Language">HTML</acronym>', '<acronym title="Cascading stylesheets">CSS</acronym>', "JavaScript"],
           },
-          { color: "#004752", content: ["python", "java", "C++", "C#" "JS", "elm"] },
+          { color: "#004752", content: ["python", "java", "C++", "C#", "JS", "elm"] },
           { color: "blue", content: ["node", "express", "react", "azure", "nginx", "apache"] },
           {
             color: "red",
