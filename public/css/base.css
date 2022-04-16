@@ -26,6 +26,11 @@ img {
   width: 100%;
   height: auto;
 }
+
+img.no-100 {
+  /*width: fit-content;*/
+}
+
 figure {
   margin: 0;
 }
