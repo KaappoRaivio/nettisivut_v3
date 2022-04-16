@@ -92,13 +92,14 @@
             content:
               ['<acronym title="Hypertext Markup Language">HTML</acronym>', '<acronym title="Cascading stylesheets">CSS</acronym>', "JavaScript"],
           },
-          { color: "#004752", content: ["python", "java", "c++"] },
-          { color: "blue", content: ["node", "express", "react"] },
+          { color: "#004752", content: ["python", "java", "C++", "C#" "JS", "elm"] },
+          { color: "blue", content: ["node", "express", "react", "azure", "nginx", "apache"] },
           {
             color: "red",
             content:
               [
                 "Android",
+                "Unity",
                 '<acronym title="Universal Windows Platform">UWP</acronym>',
                 "Hololens",
                 '<acronym title="High level architecture">HLA</acronym>',
