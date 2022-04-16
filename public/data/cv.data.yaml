@@ -40,7 +40,10 @@
             note: "part-time",
             cornerNote: "Feb 2021 –",
             description:
-              { language: "html", content: "Through my trade name (toiminimi), I sell licenses to my photographs and do small photographing gigs." },
+              {
+                language: "html",
+                content: "Through my trade name (toiminimi), I sell licenses to my photographs and do small photographing gigs. In addition, I have done small software consulting projects to various clients",
+              },
             role: "primary",
           },
           {
@@ -49,7 +52,7 @@
             cornerNote: "Sep 2021 – ",
             note: "part-time",
             description: { language: "html", "content": "I work part-time while studying my final year at Otaniemi upper secondary school.
-                  My tasks consist of generic software development and system integration." },
+                  My tasks consist of generic software development and system integration. The code I ship directly contributes to client delivery." },
             role: "primary",
           },
         ],
