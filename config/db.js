@@ -59,9 +59,9 @@ module.exports = {
   },
 
   getBlogPosts: async () => {
-    return {
-      ALL: GLOBAL_DATA,
-      posts: await Promise.all(
+    let posts;
+    try {
+      posts = await Promise.all(
         postFolders.map(async postFolder => {
           const { previewText, title, coverImage } = yaml.parse(await fsp.readFile(path.join(postFolder, "post.yaml"), "utf-8"));
           const id = postFolder
@@ -80,7 +80,13 @@ module.exports = {
             cleanTitle: getSlug(title),
           };
         })
-      ),
+      );
+    } catch (e) {
+      posts = [];
+    }
+    return {
+      ALL: GLOBAL_DATA,
+      posts,
     };
   },
 
