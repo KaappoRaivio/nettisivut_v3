@@ -2,15 +2,19 @@
   "portfolio":
     [
       {
-        "title": "Raytracer",
-        "coverImage": { "src": "/public/res/raytracing.jpg", "alt": "A raytraced scene" },
+        "title": "A Ray tracing renderer",
+        "coverImage": { "src": "/public/res/raytracing2.webp", "alt": "A traced scene" },
         "logo": { "src": "" },
         "previewText":
           {
             "language": "html",
             "content": "<p>I have written a raytracer completely from scratch, only using OpenGL for setting pixel colors on the screen.
-              It supports diffuse and specular reflections, different materials and shapes, as well as reading a mesh from a .obj file. It's written in c++, and can render
-              the shown demo image in under ten seconds.</p>",
+              It supports diffuse and specular reflections, refraction, fresnel effects, different materials and shapes, as well as reading a mesh from a .obj file.
+              It's written in c++ and utilises OpenMP to parallelize the calculations. </p>
+              <p>Through various optimizations, mainly the utilization of bounding volume hierarchies, the rendering times are quite competetive for a single-person passion project.
+              <p>In addition, I am currently working on a Youtube video on the topic.</p>
+              </p>
+              ",
           },
       },
       {
@@ -20,7 +24,24 @@
         "previewText": { "language": "html", "content": '<p>Scientia (<code>/ˈsaɪənˌtɪa/</code>) is a boat instrumentation system which uses an open
               standard, <a href="https://signalk.org/">Signal K</a> as its data source. It''s capable of
               displaying data from a <a href="https://github.com/SignalK/signalk-server">Signal K server</a>
-              in a clear and uncluttered way.</p>' },
+              in a clear and uncluttered way.</p>
+              <div class="scientia-images">
+              <img src="public/res/scientia/gauge1.gif" class="no-100"/>
+              <img src="public/res/scientia/numeric.gif" class="no-100" style="float: left; margin-right: 1%; box-shadow: 0px 2.5px 2.5px gray" width="24%"/>
+              <img src="public/res/scientia/compass.gif" class="no-100" style="float: left; margin-right: 1%; box-shadow: 0px 2.5px 2.5px gray" width="24%"/>
+              <img src="public/res/scientia/wind.gif" class="no-100" style="float: left; margin-right: 1%; box-shadow: 0px 2.5px 2.5px gray" width="24%"/>
+              </div>
+              <p>My most desired use case from the very beginning was to use my smartphone as a client.
+              Phone screens are quite small, which means that the number one design goal for the project
+              is <strong>no wasted screen real estate</strong>.</p>
+
+              <p>Another important factor is that I want a robust solution. This means that <strong>no unnecessary complexity is allowed</strong> which could break something. For example, I decided in the very beginning that  all of the instruments should conform to a grid (although it is possible to sub-divide the grid), and not be resizeable.</p>
+              <p>The third objective is to make processing the information easier by <strong>representing it in the best way possible</strong>.</p>
+              <div class="scientia-images scientia-images-2">
+              <img src="public/res/scientia/concept1.webp"/>
+              <img src="public/res/scientia/concept2.webp"/>
+              </div>
+              ' },
       },
       {
         "title": "WilmaInk",
