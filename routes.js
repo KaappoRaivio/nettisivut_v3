@@ -15,6 +15,9 @@ module.exports = async app => {
   app.use("/.well-known", express.static(path.join(__dirname, "/.well-known")));
   app.use("/sitemap.xml", express.static(path.join(__dirname, "/sitemap.xml")));
   app.use("/robots.txt", express.static(path.join(__dirname, "/robots.txt")));
+  app.get("/sitemap.xml", (req, res) => {
+    res.sendFile(express.static(path.join(__dirname, "/sitemap.xml")));
+  });
 
   const boilerplateTemplate = await db.getBoilerplateTemplate();
 

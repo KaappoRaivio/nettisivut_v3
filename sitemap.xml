@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://kaapporaivio.fi/</loc>
+  <lastmod>2022-05-09T18:40:31+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://kaapporaivio.fi/portfolio</loc>
+  <lastmod>2022-05-09T18:40:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kaapporaivio.fi/CV</loc>
+  <lastmod>2022-05-09T18:40:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kaapporaivio.fi/blog</loc>
+  <lastmod>2022-05-09T18:40:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kaapporaivio.fi/about</loc>
+  <lastmod>2022-05-09T18:40:31+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kaapporaivio.fi/blog/post/3/things-i-wish-someone-had-told-me-you-should-edit-your-photos-part-2</loc>
+  <lastmod>2022-05-09T18:40:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kaapporaivio.fi/blog/post/2/things-i-wish-someone-had-told-me-gear-does-matter-part-1</loc>
+  <lastmod>2022-05-09T18:40:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://kaapporaivio.fi/blog/post/1/first-post-yayy</loc>
+  <lastmod>2022-05-09T18:40:31+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
