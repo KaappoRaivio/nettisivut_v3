@@ -28,7 +28,8 @@ module.exports = {
     return GLOBAL_DATA;
   },
   getStaticPages: async () => {
-    const pageFilePaths = await globp("views/**/*.template.html");
+    const pageFilePaths = (await globp("views/**/*.template.html")).filter(path => !path.includes("404"));
+    console.log(pageFilePaths);
     // console.log("Defining the following pages:");
     // console.group();
     // pageFilePaths.forEach(path => console.log(path));

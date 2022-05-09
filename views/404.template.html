@@ -1,0 +1,20 @@
+<div class="content-wrapper">
+  <main class="content">
+    <h2 id="Portfolio">Portfolio</h2>
+    <p>Here is a compilation of my personal projects that best represent my skills in various areas of information technology.</p>
+
+    <ul class="no-bullets add-horizontal-rule">
+      <li>
+        {{#each portfolio}}
+        <h3 class="portfolio-header" id="{{this.title}}">{{this.title}}</h3>
+        <div class="">
+          <img src="{{this.coverImage.src}}" alt="{{this.coverImage.alt}}" class="portfolio-cover half-width-on-wide" />
+          <img class="portfolio-logo" loading="lazy" src="{{this.logo.src}}" alt="" />
+
+          {{{this.previewText.content}}}
+        </div>
+        {{/each}}
+      </li>
+    </ul>
+  </main>
+</div>

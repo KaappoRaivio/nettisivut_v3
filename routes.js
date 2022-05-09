@@ -14,13 +14,13 @@ module.exports = async app => {
   app.use("/public", express.static(path.join(__dirname, "/public")));
   app.use("/.well-known", express.static(path.join(__dirname, "/.well-known")));
 
-  const boileplateTempalte = await db.getBoilerplateTemplate();
+  const boilerplateTemplate = await db.getBoilerplateTemplate();
 
   const pages = await db.getStaticPages();
   pages.forEach(({ pageName, pageTemplate, pageData }) => {
     console.log(pageName);
     app.get(`/${pageName}`, async (req, res) => {
-      res.status(200).send(boileplateTempalte({ ALL: await db.getGlobalData(), content: pageTemplate(pageData) }));
+      res.status(200).send(boilerplateTemplate({ ALL: await db.getGlobalData(), content: pageTemplate(pageData) }));
     });
   });
 
@@ -77,5 +77,10 @@ module.exports = async app => {
 
     const { templateData, meta } = await db.getBlogPost(id);
     res.status(200).send(blogpostTemplate({ ...templateData, meta }));
+  });
+
+  const HTTP404Template = Handlebars.compile("{{> notFound }}");
+  app.use(async (req, res, next) => {
+    res.status(404).send(HTTP404Template({ ALL: await db.getGlobalData() }));
   });
 };
