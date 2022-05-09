@@ -4,7 +4,7 @@
 
 .cv-list-item {
   border: 2px solid;
-  border-radius: 1vmin;
+  border-radius: 4px;
   position: relative;
   padding: 2%;
   margin: 2% 0;
@@ -12,7 +12,8 @@
 }
 
 .cv-list-item--primary {
-  box-shadow: 1px 2px 5px gray;
+  border: 2.5px solid;
+  /*box-shadow: 1px 2px 5px gray;*/
 }
 
 .cv-list-item--secondary {

@@ -168,3 +168,28 @@ li img:after {
 .black {
   color: black;
 }
+
+h1 {
+  font-weight: 900;
+}
+
+h2 {
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 150%;
+  font-weight: 700;
+}
+
+h4 {
+  font-weight: 600;
+}
+
+h5 {
+  font-weight: 500;
+}
+
+h6 {
+  font-weight: 400;
+}
