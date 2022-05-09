@@ -13,10 +13,13 @@ const GLOBAL_DATA = db.getGlobalData();
 module.exports = async app => {
   app.use("/public", express.static(path.join(__dirname, "/public")));
   app.use("/.well-known", express.static(path.join(__dirname, "/.well-known")));
-  // app.use("/sitemap.xml", express.static(path.join(__dirname, "/sitemap.xml")));
-  app.use("/robots.txt", express.static(path.join(__dirname, "/robots.txt")));
+
   app.get("/sitemap.xml", (req, res) => {
     res.sendFile(path.join(__dirname, "/sitemap.xml"));
+  });
+
+  app.get("/robots.txt", (req, res) => {
+    res.sendFile(path.join(__dirname, "/robots.txt"));
   });
 
   const boilerplateTemplate = await db.getBoilerplateTemplate();
