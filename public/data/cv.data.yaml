@@ -79,9 +79,19 @@
             title: "Otaniemi Upper Secondary School",
             subtitle: "Mathematics and science program",
             cornerNote: "Aug 2019 – Jun 2022 (expected)",
-            description: { language: "html", content: "<p>
+            description: { language: "html", content: '
+                  <p><a href="https://opintopolku.fi/koski/opinnot/fb64eec182d34a2885b5635bc5a37e2d">Link to my matriculation examination results (in Finnish)</a>:</p>
+                  <ul>
+                  <li>Mathematics: <strong>Laudatur</strong></li>
+                  <li>Physics: <strong>Laudatur</strong></li>
+                  <li>Chemistry: <strong>Laudatur</strong></li>
+                  <li>Finnish: <strong>Laudatur</strong></li>
+                  <li>English: <strong>Laudatur</strong></li>
+                  </ul
+                  <p>
+                  <br>
                   Also, a few completed programming courses at Aalto University through collaboration with them
-                  </p>" },
+                  </p>' },
             role: "primary",
           },
         ],
