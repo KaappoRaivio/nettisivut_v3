@@ -32,6 +32,10 @@ module.exports = async app => {
     });
   });
 
+  app.get("/references", (req, res) => {
+    res.redirect("/CV");
+  });
+
   app.get("/", (req, res) => {
     res.status(200).send(db.getLandingPage());
   });
